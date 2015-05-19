@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SASearchPlaylistViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-@property (strong, nonatomic) NSArray *tracks;
+@property (strong, nonatomic) NSDictionary *playlist;
 @end

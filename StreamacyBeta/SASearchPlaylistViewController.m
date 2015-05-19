@@ -11,7 +11,7 @@
 
 @interface SASearchPlaylistViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-
+@property (strong, nonatomic) NSArray *tracks;
 @end
 
 @implementation SASearchPlaylistViewController
@@ -21,6 +21,15 @@
 
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    self.tracks = [[NSMutableArray alloc]init];
+    
+    NSDictionary *playlist = self.playlist;
+    
+    self.navigationItem.title = playlist[@"title"];
+    
+    NSArray *playlistTracks = playlist[@"tracks"];
+    self.tracks = playlistTracks;
     
 }
 

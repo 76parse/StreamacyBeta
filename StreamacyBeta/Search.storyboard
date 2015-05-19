@@ -471,9 +471,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cTZ-gk-eQh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" allowsSelection="NO" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="cTZ-gk-eQh">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Songs" rowHeight="70" id="y9K-3w-6cy" customClass="SASearchTableViewCell">
                                         <rect key="frame" x="0.0" y="249" width="320" height="70"/>
@@ -552,6 +553,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jH8-dW-nG3" firstAttribute="top" secondItem="cTZ-gk-eQh" secondAttribute="bottom" id="P7q-Ec-8OA"/>
+                            <constraint firstAttribute="trailing" secondItem="cTZ-gk-eQh" secondAttribute="trailing" id="VSb-AR-7Ch"/>
+                            <constraint firstItem="cTZ-gk-eQh" firstAttribute="leading" secondItem="TSG-Nx-fi4" secondAttribute="leading" id="phd-ar-lUR"/>
+                            <constraint firstItem="cTZ-gk-eQh" firstAttribute="top" secondItem="TSG-Nx-fi4" secondAttribute="top" id="wY6-zD-Fgb"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>

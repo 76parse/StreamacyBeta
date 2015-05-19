@@ -48,16 +48,17 @@
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [searchBar resignFirstResponder];
     [self.tableView setContentOffset:CGPointMake(0, 0 - self.tableView.contentInset.top) animated:YES];
-    self.tableView.hidden = NO;
     //Get the tracks and users and reload the table view
     NSString *userInput = searchBar.text;
     [SoundCloudAPI getUsersWithSearch:userInput withCompletion:^(NSMutableArray *users) {
         self.users = [users mutableCopy];
+        self.tableView.hidden = NO;
         [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:
          UITableViewRowAnimationFade];
     }];
     [SoundCloudAPI getTracksWithSearch:userInput userID:nil withCompletion:^(NSMutableArray *tracks) {
         self.tracks = tracks;
+        self.tableView.hidden = NO;
         [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:
          UITableViewRowAnimationFade];
     }];

@@ -134,8 +134,8 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *playlistTracks = self.playlists[indexPath.row][@"tracks"];
-    [self performSegueWithIdentifier:@"toPlaylistVC" sender:playlistTracks];
+    NSArray *playlist = self.playlists[indexPath.row];
+    [self performSegueWithIdentifier:@"toPlaylistVC" sender:playlist];
 }
 
 #pragma mark - Navigation
@@ -144,7 +144,7 @@
 {
     if ([segue.identifier isEqualToString:@"toPlaylistVC"]) {
         SASearchPlaylistViewController *playlistVC = segue.destinationViewController;
-        playlistVC.tracks = sender;
+        playlistVC.playlist = sender;
     }
 }
 
