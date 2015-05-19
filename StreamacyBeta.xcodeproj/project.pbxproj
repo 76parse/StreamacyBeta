@@ -31,6 +31,16 @@
 		184D401A1B0B02A100A80E1B /* BlackBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184D40191B0B02A100A80E1B /* BlackBack@2x.png */; };
 		18A1E75C1B0B83360036EA19 /* StreamBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A1E75B1B0B83360036EA19 /* StreamBackground@2x.png */; };
 		18A1E7601B0B87970036EA19 /* StreamIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A1E75F1B0B87970036EA19 /* StreamIcon@2x.png */; };
+		18A1E7621B0B8FC40036EA19 /* SearchBig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A1E7611B0B8FC40036EA19 /* SearchBig@2x.png */; };
+		18A1E7691B0B93ED0036EA19 /* SASearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7681B0B93ED0036EA19 /* SASearchTableViewCell.m */; };
+		18A1E76D1B0B987A0036EA19 /* PlusCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A1E76C1B0B987A0036EA19 /* PlusCircle@2x.png */; };
+		18A1E7701B0B9C1D0036EA19 /* SASearchCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E76F1B0B9C1D0036EA19 /* SASearchCollectionViewCell.m */; };
+		18A1E7731B0BA0720036EA19 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7721B0BA0720036EA19 /* Helpers.m */; };
+		18A1E7761B0BA12C0036EA19 /* no-album-art.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A1E7751B0BA12C0036EA19 /* no-album-art.png */; };
+		18A1E77D1B0BA21F0036EA19 /* PlaylistParseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7781B0BA21F0036EA19 /* PlaylistParseAPI.m */; };
+		18A1E77E1B0BA21F0036EA19 /* TrackParseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E77A1B0BA21F0036EA19 /* TrackParseAPI.m */; };
+		18A1E77F1B0BA21F0036EA19 /* SoundCloudAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E77C1B0BA21F0036EA19 /* SoundCloudAPI.m */; };
+		18A1E7831B0BA2330036EA19 /* TrackObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7821B0BA2330036EA19 /* TrackObject.m */; };
 		D8D0BBC36C37CCC5AF9A8A3B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F25BF0504A8E95EE20FA02D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +90,26 @@
 		184D40191B0B02A100A80E1B /* BlackBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BlackBack@2x.png"; sourceTree = "<group>"; };
 		18A1E75B1B0B83360036EA19 /* StreamBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StreamBackground@2x.png"; sourceTree = "<group>"; };
 		18A1E75F1B0B87970036EA19 /* StreamIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StreamIcon@2x.png"; sourceTree = "<group>"; };
+		18A1E7611B0B8FC40036EA19 /* SearchBig@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SearchBig@2x.png"; sourceTree = "<group>"; };
+		18A1E7631B0B90860036EA19 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		18A1E7641B0B90860036EA19 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		18A1E7651B0B90930036EA19 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		18A1E7671B0B93ED0036EA19 /* SASearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASearchTableViewCell.h; sourceTree = "<group>"; };
+		18A1E7681B0B93ED0036EA19 /* SASearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SASearchTableViewCell.m; sourceTree = "<group>"; };
+		18A1E76C1B0B987A0036EA19 /* PlusCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlusCircle@2x.png"; sourceTree = "<group>"; };
+		18A1E76E1B0B9C1D0036EA19 /* SASearchCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASearchCollectionViewCell.h; sourceTree = "<group>"; };
+		18A1E76F1B0B9C1D0036EA19 /* SASearchCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SASearchCollectionViewCell.m; sourceTree = "<group>"; };
+		18A1E7711B0BA0720036EA19 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		18A1E7721B0BA0720036EA19 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
+		18A1E7751B0BA12C0036EA19 /* no-album-art.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no-album-art.png"; sourceTree = "<group>"; };
+		18A1E7771B0BA21F0036EA19 /* PlaylistParseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistParseAPI.h; sourceTree = "<group>"; };
+		18A1E7781B0BA21F0036EA19 /* PlaylistParseAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistParseAPI.m; sourceTree = "<group>"; };
+		18A1E7791B0BA21F0036EA19 /* TrackParseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackParseAPI.h; sourceTree = "<group>"; };
+		18A1E77A1B0BA21F0036EA19 /* TrackParseAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackParseAPI.m; sourceTree = "<group>"; };
+		18A1E77B1B0BA21F0036EA19 /* SoundCloudAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundCloudAPI.h; sourceTree = "<group>"; };
+		18A1E77C1B0BA21F0036EA19 /* SoundCloudAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundCloudAPI.m; sourceTree = "<group>"; };
+		18A1E7811B0BA2330036EA19 /* TrackObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackObject.h; sourceTree = "<group>"; };
+		18A1E7821B0BA2330036EA19 /* TrackObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackObject.m; sourceTree = "<group>"; };
 		1F25BF0504A8E95EE20FA02D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A5676AF2D9FBCAB445FADF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BE0032CD7B7C36D5843539AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +167,9 @@
 				184D3FDD1B0AD6A400A80E1B /* Friends */,
 				184D3FB41B0AD22B00A80E1B /* Images.xcassets */,
 				184D3FB61B0AD22B00A80E1B /* LaunchScreen.xib */,
+				18A1E7801B0BA2220036EA19 /* APIs */,
+				18A1E7841B0BA2370036EA19 /* Models */,
+				18A1E7741B0BA0760036EA19 /* Helpers */,
 				184D3FA71B0AD22B00A80E1B /* Supporting Files */,
 			);
 			path = StreamacyBeta;
@@ -145,6 +178,9 @@
 		184D3FA71B0AD22B00A80E1B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18A1E7661B0B90990036EA19 /* Fonts */,
+				18A1E7751B0BA12C0036EA19 /* no-album-art.png */,
+				18A1E7611B0B8FC40036EA19 /* SearchBig@2x.png */,
 				18A1E75F1B0B87970036EA19 /* StreamIcon@2x.png */,
 				18A1E75B1B0B83360036EA19 /* StreamBackground@2x.png */,
 				184D40191B0B02A100A80E1B /* BlackBack@2x.png */,
@@ -221,6 +257,10 @@
 				184D3FD01B0AD47300A80E1B /* Search.storyboard */,
 				184D3FEC1B0AEE4800A80E1B /* SASearchViewController.h */,
 				184D3FED1B0AEE4800A80E1B /* SASearchViewController.m */,
+				18A1E7671B0B93ED0036EA19 /* SASearchTableViewCell.h */,
+				18A1E7681B0B93ED0036EA19 /* SASearchTableViewCell.m */,
+				18A1E76E1B0B9C1D0036EA19 /* SASearchCollectionViewCell.h */,
+				18A1E76F1B0B9C1D0036EA19 /* SASearchCollectionViewCell.m */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -233,6 +273,48 @@
 				184D3FFD1B0AF26800A80E1B /* SAStreamViewController.m */,
 			);
 			name = Stream;
+			sourceTree = "<group>";
+		};
+		18A1E7661B0B90990036EA19 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				18A1E76C1B0B987A0036EA19 /* PlusCircle@2x.png */,
+				18A1E7631B0B90860036EA19 /* OpenSans-Light.ttf */,
+				18A1E7641B0B90860036EA19 /* OpenSans-Regular.ttf */,
+				18A1E7651B0B90930036EA19 /* OpenSans-Semibold.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		18A1E7741B0BA0760036EA19 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				18A1E7711B0BA0720036EA19 /* Helpers.h */,
+				18A1E7721B0BA0720036EA19 /* Helpers.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		18A1E7801B0BA2220036EA19 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				18A1E7771B0BA21F0036EA19 /* PlaylistParseAPI.h */,
+				18A1E7781B0BA21F0036EA19 /* PlaylistParseAPI.m */,
+				18A1E7791B0BA21F0036EA19 /* TrackParseAPI.h */,
+				18A1E77A1B0BA21F0036EA19 /* TrackParseAPI.m */,
+				18A1E77B1B0BA21F0036EA19 /* SoundCloudAPI.h */,
+				18A1E77C1B0BA21F0036EA19 /* SoundCloudAPI.m */,
+			);
+			name = APIs;
+			sourceTree = "<group>";
+		};
+		18A1E7841B0BA2370036EA19 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18A1E7811B0BA2330036EA19 /* TrackObject.h */,
+				18A1E7821B0BA2330036EA19 /* TrackObject.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		64076848B5B7E9F1985388BD /* Pods */ = {
@@ -339,16 +421,19 @@
 				184D3FB81B0AD22B00A80E1B /* LaunchScreen.xib in Resources */,
 				184D3FD61B0AD47300A80E1B /* Stream.storyboard in Resources */,
 				184D40161B0AF75200A80E1B /* Playlists@2x.png in Resources */,
+				18A1E7621B0B8FC40036EA19 /* SearchBig@2x.png in Resources */,
 				18A1E7601B0B87970036EA19 /* StreamIcon@2x.png in Resources */,
 				184D3FD51B0AD47300A80E1B /* Search.storyboard in Resources */,
 				184D3FD81B0AD48E00A80E1B /* Main.storyboard in Resources */,
 				184D401A1B0B02A100A80E1B /* BlackBack@2x.png in Resources */,
+				18A1E7761B0BA12C0036EA19 /* no-album-art.png in Resources */,
 				18A1E75C1B0B83360036EA19 /* StreamBackground@2x.png in Resources */,
 				184D3FB51B0AD22B00A80E1B /* Images.xcassets in Resources */,
 				184D40171B0AF75200A80E1B /* Search@2x.png in Resources */,
 				184D3FD31B0AD47300A80E1B /* Inbox.storyboard in Resources */,
 				184D40141B0AF75200A80E1B /* Friends@2x.png in Resources */,
 				184D40151B0AF75200A80E1B /* Inbox@2x.png in Resources */,
+				18A1E76D1B0B987A0036EA19 /* PlusCircle@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +484,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A1E77D1B0BA21F0036EA19 /* PlaylistParseAPI.m in Sources */,
+				18A1E77E1B0BA21F0036EA19 /* TrackParseAPI.m in Sources */,
+				18A1E77F1B0BA21F0036EA19 /* SoundCloudAPI.m in Sources */,
+				18A1E7701B0B9C1D0036EA19 /* SASearchCollectionViewCell.m in Sources */,
+				18A1E7731B0BA0720036EA19 /* Helpers.m in Sources */,
 				184D3FEE1B0AEE4800A80E1B /* SASearchViewController.m in Sources */,
 				184D40011B0AF27900A80E1B /* SAInboxViewController.m in Sources */,
 				184D40041B0AF28800A80E1B /* SAFriendsViewController.m in Sources */,
@@ -406,7 +496,9 @@
 				184D3FFE1B0AF26800A80E1B /* SAStreamViewController.m in Sources */,
 				184D3FAA1B0AD22B00A80E1B /* main.m in Sources */,
 				184D3FFB1B0AF25200A80E1B /* SAPlaylistsViewController.m in Sources */,
+				18A1E7831B0BA2330036EA19 /* TrackObject.m in Sources */,
 				184D3FDB1B0AD49F00A80E1B /* SATabBarController.m in Sources */,
+				18A1E7691B0B93ED0036EA19 /* SASearchTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
