@@ -9,11 +9,28 @@
 /* Begin PBXBuildFile section */
 		184D3FAA1B0AD22B00A80E1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3FA91B0AD22B00A80E1B /* main.m */; };
 		184D3FAD1B0AD22B00A80E1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3FAC1B0AD22B00A80E1B /* AppDelegate.m */; };
-		184D3FB01B0AD22B00A80E1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3FAF1B0AD22B00A80E1B /* ViewController.m */; };
-		184D3FB31B0AD22B00A80E1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D3FB11B0AD22B00A80E1B /* Main.storyboard */; };
 		184D3FB51B0AD22B00A80E1B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184D3FB41B0AD22B00A80E1B /* Images.xcassets */; };
 		184D3FB81B0AD22B00A80E1B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D3FB61B0AD22B00A80E1B /* LaunchScreen.xib */; };
 		184D3FC41B0AD22C00A80E1B /* StreamacyBetaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3FC31B0AD22C00A80E1B /* StreamacyBetaTests.m */; };
+		184D3FD21B0AD47300A80E1B /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D3FCD1B0AD47300A80E1B /* Friends.storyboard */; };
+		184D3FD31B0AD47300A80E1B /* Inbox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D3FCE1B0AD47300A80E1B /* Inbox.storyboard */; };
+		184D3FD41B0AD47300A80E1B /* Playlists.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D3FCF1B0AD47300A80E1B /* Playlists.storyboard */; };
+		184D3FD51B0AD47300A80E1B /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D3FD01B0AD47300A80E1B /* Search.storyboard */; };
+		184D3FD61B0AD47300A80E1B /* Stream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D3FD11B0AD47300A80E1B /* Stream.storyboard */; };
+		184D3FD81B0AD48E00A80E1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184D3FD71B0AD48E00A80E1B /* Main.storyboard */; };
+		184D3FDB1B0AD49F00A80E1B /* SATabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3FDA1B0AD49F00A80E1B /* SATabBarController.m */; };
+		184D3FEE1B0AEE4800A80E1B /* SASearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3FED1B0AEE4800A80E1B /* SASearchViewController.m */; };
+		184D3FFB1B0AF25200A80E1B /* SAPlaylistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3FFA1B0AF25200A80E1B /* SAPlaylistsViewController.m */; };
+		184D3FFE1B0AF26800A80E1B /* SAStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D3FFD1B0AF26800A80E1B /* SAStreamViewController.m */; };
+		184D40011B0AF27900A80E1B /* SAInboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D40001B0AF27900A80E1B /* SAInboxViewController.m */; };
+		184D40041B0AF28800A80E1B /* SAFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D40031B0AF28800A80E1B /* SAFriendsViewController.m */; };
+		184D40141B0AF75200A80E1B /* Friends@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184D400F1B0AF75200A80E1B /* Friends@2x.png */; };
+		184D40151B0AF75200A80E1B /* Inbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184D40101B0AF75200A80E1B /* Inbox@2x.png */; };
+		184D40161B0AF75200A80E1B /* Playlists@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184D40111B0AF75200A80E1B /* Playlists@2x.png */; };
+		184D40171B0AF75200A80E1B /* Search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184D40121B0AF75200A80E1B /* Search@2x.png */; };
+		184D40181B0AF75200A80E1B /* Stream@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184D40131B0AF75200A80E1B /* Stream@2x.png */; };
+		184D401A1B0B02A100A80E1B /* BlackBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184D40191B0B02A100A80E1B /* BlackBack@2x.png */; };
+		D8D0BBC36C37CCC5AF9A8A3B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F25BF0504A8E95EE20FA02D /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +49,38 @@
 		184D3FA91B0AD22B00A80E1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		184D3FAB1B0AD22B00A80E1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		184D3FAC1B0AD22B00A80E1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		184D3FAE1B0AD22B00A80E1B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		184D3FAF1B0AD22B00A80E1B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		184D3FB21B0AD22B00A80E1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		184D3FB41B0AD22B00A80E1B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		184D3FB71B0AD22B00A80E1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		184D3FBD1B0AD22B00A80E1B /* StreamacyBetaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreamacyBetaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		184D3FC21B0AD22C00A80E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		184D3FC31B0AD22C00A80E1B /* StreamacyBetaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreamacyBetaTests.m; sourceTree = "<group>"; };
+		184D3FCD1B0AD47300A80E1B /* Friends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
+		184D3FCE1B0AD47300A80E1B /* Inbox.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Inbox.storyboard; sourceTree = "<group>"; };
+		184D3FCF1B0AD47300A80E1B /* Playlists.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Playlists.storyboard; sourceTree = "<group>"; };
+		184D3FD01B0AD47300A80E1B /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		184D3FD11B0AD47300A80E1B /* Stream.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stream.storyboard; sourceTree = "<group>"; };
+		184D3FD71B0AD48E00A80E1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		184D3FD91B0AD49F00A80E1B /* SATabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SATabBarController.h; sourceTree = "<group>"; };
+		184D3FDA1B0AD49F00A80E1B /* SATabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SATabBarController.m; sourceTree = "<group>"; };
+		184D3FEC1B0AEE4800A80E1B /* SASearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASearchViewController.h; sourceTree = "<group>"; };
+		184D3FED1B0AEE4800A80E1B /* SASearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SASearchViewController.m; sourceTree = "<group>"; };
+		184D3FF91B0AF25200A80E1B /* SAPlaylistsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAPlaylistsViewController.h; sourceTree = "<group>"; };
+		184D3FFA1B0AF25200A80E1B /* SAPlaylistsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAPlaylistsViewController.m; sourceTree = "<group>"; };
+		184D3FFC1B0AF26800A80E1B /* SAStreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAStreamViewController.h; sourceTree = "<group>"; };
+		184D3FFD1B0AF26800A80E1B /* SAStreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAStreamViewController.m; sourceTree = "<group>"; };
+		184D3FFF1B0AF27900A80E1B /* SAInboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAInboxViewController.h; sourceTree = "<group>"; };
+		184D40001B0AF27900A80E1B /* SAInboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAInboxViewController.m; sourceTree = "<group>"; };
+		184D40021B0AF28800A80E1B /* SAFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAFriendsViewController.h; sourceTree = "<group>"; };
+		184D40031B0AF28800A80E1B /* SAFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAFriendsViewController.m; sourceTree = "<group>"; };
+		184D400F1B0AF75200A80E1B /* Friends@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Friends@2x.png"; sourceTree = "<group>"; };
+		184D40101B0AF75200A80E1B /* Inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Inbox@2x.png"; sourceTree = "<group>"; };
+		184D40111B0AF75200A80E1B /* Playlists@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Playlists@2x.png"; sourceTree = "<group>"; };
+		184D40121B0AF75200A80E1B /* Search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Search@2x.png"; sourceTree = "<group>"; };
+		184D40131B0AF75200A80E1B /* Stream@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stream@2x.png"; sourceTree = "<group>"; };
+		184D40191B0B02A100A80E1B /* BlackBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BlackBack@2x.png"; sourceTree = "<group>"; };
+		1F25BF0504A8E95EE20FA02D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		87A5676AF2D9FBCAB445FADF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BE0032CD7B7C36D5843539AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8D0BBC36C37CCC5AF9A8A3B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +108,8 @@
 				184D3FA61B0AD22B00A80E1B /* StreamacyBeta */,
 				184D3FC01B0AD22B00A80E1B /* StreamacyBetaTests */,
 				184D3FA51B0AD22B00A80E1B /* Products */,
+				64076848B5B7E9F1985388BD /* Pods */,
+				6E7DEB0595CC169A63CE617A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +127,12 @@
 			children = (
 				184D3FAB1B0AD22B00A80E1B /* AppDelegate.h */,
 				184D3FAC1B0AD22B00A80E1B /* AppDelegate.m */,
-				184D3FAE1B0AD22B00A80E1B /* ViewController.h */,
-				184D3FAF1B0AD22B00A80E1B /* ViewController.m */,
-				184D3FB11B0AD22B00A80E1B /* Main.storyboard */,
+				184D3FDC1B0AD69800A80E1B /* Main/TabBar */,
+				184D3FDF1B0AD6B000A80E1B /* Playlists */,
+				184D3FE01B0AD6B600A80E1B /* Search */,
+				184D3FE11B0AD6BB00A80E1B /* Stream */,
+				184D3FDE1B0AD6AA00A80E1B /* Inbox */,
+				184D3FDD1B0AD6A400A80E1B /* Friends */,
 				184D3FB41B0AD22B00A80E1B /* Images.xcassets */,
 				184D3FB61B0AD22B00A80E1B /* LaunchScreen.xib */,
 				184D3FA71B0AD22B00A80E1B /* Supporting Files */,
@@ -96,6 +143,12 @@
 		184D3FA71B0AD22B00A80E1B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				184D40191B0B02A100A80E1B /* BlackBack@2x.png */,
+				184D400F1B0AF75200A80E1B /* Friends@2x.png */,
+				184D40101B0AF75200A80E1B /* Inbox@2x.png */,
+				184D40111B0AF75200A80E1B /* Playlists@2x.png */,
+				184D40121B0AF75200A80E1B /* Search@2x.png */,
+				184D40131B0AF75200A80E1B /* Stream@2x.png */,
 				184D3FA81B0AD22B00A80E1B /* Info.plist */,
 				184D3FA91B0AD22B00A80E1B /* main.m */,
 			);
@@ -119,6 +172,83 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		184D3FDC1B0AD69800A80E1B /* Main/TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				184D3FD71B0AD48E00A80E1B /* Main.storyboard */,
+				184D3FD91B0AD49F00A80E1B /* SATabBarController.h */,
+				184D3FDA1B0AD49F00A80E1B /* SATabBarController.m */,
+			);
+			name = Main/TabBar;
+			sourceTree = "<group>";
+		};
+		184D3FDD1B0AD6A400A80E1B /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				184D3FCD1B0AD47300A80E1B /* Friends.storyboard */,
+				184D40021B0AF28800A80E1B /* SAFriendsViewController.h */,
+				184D40031B0AF28800A80E1B /* SAFriendsViewController.m */,
+			);
+			name = Friends;
+			sourceTree = "<group>";
+		};
+		184D3FDE1B0AD6AA00A80E1B /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				184D3FCE1B0AD47300A80E1B /* Inbox.storyboard */,
+				184D3FFF1B0AF27900A80E1B /* SAInboxViewController.h */,
+				184D40001B0AF27900A80E1B /* SAInboxViewController.m */,
+			);
+			name = Inbox;
+			sourceTree = "<group>";
+		};
+		184D3FDF1B0AD6B000A80E1B /* Playlists */ = {
+			isa = PBXGroup;
+			children = (
+				184D3FCF1B0AD47300A80E1B /* Playlists.storyboard */,
+				184D3FF91B0AF25200A80E1B /* SAPlaylistsViewController.h */,
+				184D3FFA1B0AF25200A80E1B /* SAPlaylistsViewController.m */,
+			);
+			name = Playlists;
+			sourceTree = "<group>";
+		};
+		184D3FE01B0AD6B600A80E1B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				184D3FD01B0AD47300A80E1B /* Search.storyboard */,
+				184D3FEC1B0AEE4800A80E1B /* SASearchViewController.h */,
+				184D3FED1B0AEE4800A80E1B /* SASearchViewController.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		184D3FE11B0AD6BB00A80E1B /* Stream */ = {
+			isa = PBXGroup;
+			children = (
+				184D3FD11B0AD47300A80E1B /* Stream.storyboard */,
+				184D3FFC1B0AF26800A80E1B /* SAStreamViewController.h */,
+				184D3FFD1B0AF26800A80E1B /* SAStreamViewController.m */,
+			);
+			name = Stream;
+			sourceTree = "<group>";
+		};
+		64076848B5B7E9F1985388BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE0032CD7B7C36D5843539AF /* Pods.debug.xcconfig */,
+				87A5676AF2D9FBCAB445FADF /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6E7DEB0595CC169A63CE617A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F25BF0504A8E95EE20FA02D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +256,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 184D3FC71B0AD22C00A80E1B /* Build configuration list for PBXNativeTarget "StreamacyBeta" */;
 			buildPhases = (
+				6B00C75A3778C316FF84F51F /* Check Pods Manifest.lock */,
 				184D3FA01B0AD22B00A80E1B /* Sources */,
 				184D3FA11B0AD22B00A80E1B /* Frameworks */,
 				184D3FA21B0AD22B00A80E1B /* Resources */,
+				AB2DACD80D98C641FE3CDA86 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +331,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184D3FB31B0AD22B00A80E1B /* Main.storyboard in Resources */,
+				184D3FD41B0AD47300A80E1B /* Playlists.storyboard in Resources */,
+				184D3FD21B0AD47300A80E1B /* Friends.storyboard in Resources */,
 				184D3FB81B0AD22B00A80E1B /* LaunchScreen.xib in Resources */,
+				184D3FD61B0AD47300A80E1B /* Stream.storyboard in Resources */,
+				184D40161B0AF75200A80E1B /* Playlists@2x.png in Resources */,
+				184D3FD51B0AD47300A80E1B /* Search.storyboard in Resources */,
+				184D3FD81B0AD48E00A80E1B /* Main.storyboard in Resources */,
+				184D401A1B0B02A100A80E1B /* BlackBack@2x.png in Resources */,
 				184D3FB51B0AD22B00A80E1B /* Images.xcassets in Resources */,
+				184D40181B0AF75200A80E1B /* Stream@2x.png in Resources */,
+				184D40171B0AF75200A80E1B /* Search@2x.png in Resources */,
+				184D3FD31B0AD47300A80E1B /* Inbox.storyboard in Resources */,
+				184D40141B0AF75200A80E1B /* Friends@2x.png in Resources */,
+				184D40151B0AF75200A80E1B /* Inbox@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,14 +357,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6B00C75A3778C316FF84F51F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AB2DACD80D98C641FE3CDA86 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		184D3FA01B0AD22B00A80E1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184D3FB01B0AD22B00A80E1B /* ViewController.m in Sources */,
+				184D3FEE1B0AEE4800A80E1B /* SASearchViewController.m in Sources */,
+				184D40011B0AF27900A80E1B /* SAInboxViewController.m in Sources */,
+				184D40041B0AF28800A80E1B /* SAFriendsViewController.m in Sources */,
 				184D3FAD1B0AD22B00A80E1B /* AppDelegate.m in Sources */,
+				184D3FFE1B0AF26800A80E1B /* SAStreamViewController.m in Sources */,
 				184D3FAA1B0AD22B00A80E1B /* main.m in Sources */,
+				184D3FFB1B0AF25200A80E1B /* SAPlaylistsViewController.m in Sources */,
+				184D3FDB1B0AD49F00A80E1B /* SATabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +425,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		184D3FB11B0AD22B00A80E1B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				184D3FB21B0AD22B00A80E1B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		184D3FB61B0AD22B00A80E1B /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -345,6 +518,7 @@
 		};
 		184D3FC81B0AD22C00A80E1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE0032CD7B7C36D5843539AF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StreamacyBeta/Info.plist;
@@ -355,6 +529,7 @@
 		};
 		184D3FC91B0AD22C00A80E1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87A5676AF2D9FBCAB445FADF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StreamacyBeta/Info.plist;
@@ -416,6 +591,7 @@
 				184D3FC91B0AD22C00A80E1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		184D3FCA1B0AD22C00A80E1B /* Build configuration list for PBXNativeTarget "StreamacyBetaTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +600,7 @@
 				184D3FCC1B0AD22C00A80E1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

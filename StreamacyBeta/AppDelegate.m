@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+#import <SCAPI.h>
+#import "SATabBarController.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +17,22 @@
 
 @implementation AppDelegate
 
++ (void) initialize
+{
+    [SCSoundCloud  setClientID:@"<40da707152150e8696da429111e3af39>"
+                        secret:@"<679972b9304c7b3938ae3f6a66ec0e23>"
+                   redirectURL:[NSURL URLWithString:@"reeverb://oauth"]];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [Parse setApplicationId:@"jjWiNLpXGKMpvEkBwEr8hkKqD3EnS4Y4Zk8nciMD"
+                  clientKey:@"qREHy9fjYeVm4PyyeL1Glme5lmg9ODCCEBUAWgvJ"];
+    
+    
+    
+    
+    
     return YES;
 }
 
@@ -41,5 +57,36 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
++ (UIImage *)imageFromColor:(UIColor *)color forSize:(CGSize)size withCornerRadius:(CGFloat)radius
+{
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    UIGraphicsBeginImageContext(rect.size);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    // Begin a new image that will be the new image with the rounded corners
+    // (here with the size of an UIImageView)
+    UIGraphicsBeginImageContext(size);
+    
+    // Add a clip before drawing anything, in the shape of an rounded rect
+    [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:radius] addClip];
+    // Draw your image
+    [image drawInRect:rect];
+    
+    // Get the image, here setting the UIImageView image
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // Lets forget about that we were drawing
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 
 @end

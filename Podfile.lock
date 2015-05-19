@@ -1,0 +1,48 @@
+PODS:
+  - Bolts (1.1.5):
+    - Bolts/AppLinks (= 1.1.5)
+    - Bolts/Tasks (= 1.1.5)
+  - Bolts/AppLinks (1.1.5):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.1.5)
+  - CocoaSoundCloudAPI (1.0.1):
+    - NXOAuth2Client (= 1.2.1)
+  - CocoaSoundCloudUI (1.0.5):
+    - CocoaSoundCloudAPI (~> 1.0.1)
+    - JSONKit
+    - OHAttributedLabel
+  - JSONKit (1.4)
+  - MarqueeLabel (2.2.3)
+  - NXOAuth2Client (1.2.1)
+  - OHAttributedLabel (3.5.5)
+  - Parse-iOS-SDK (1.3.0):
+    - Bolts (~> 1.1.2)
+  - SDWebImage (3.7.2):
+    - SDWebImage/Core (= 3.7.2)
+  - SDWebImage/Core (3.7.2)
+  - SIOSocket (0.2.0)
+  - SWTableViewCell (0.3.7)
+
+DEPENDENCIES:
+  - CocoaSoundCloudAPI (= 1.0.1)
+  - CocoaSoundCloudUI (= 1.0.5)
+  - MarqueeLabel
+  - Parse-iOS-SDK
+  - SDWebImage (~> 3.6)
+  - SIOSocket (~> 0.2.0)
+  - SWTableViewCell (~> 0.3.7)
+
+SPEC CHECKSUMS:
+  Bolts: aac24961496d504aa56fc267cde95162a71bac39
+  CocoaSoundCloudAPI: e8e1f2e463fa9bb9d68b2dcf361572787c7a6c3f
+  CocoaSoundCloudUI: 4deb5ffe558d0b60d0aaeaf2420dda7aa31cb239
+  JSONKit: 5b69e804ea54d99293eed0fd2ce596c5703fefb0
+  MarqueeLabel: f03d12e3a1572893f78ecb22aa5dd774099c7208
+  NXOAuth2Client: 4705ee7d3532c106e2758e2f10f4e9964b5aec68
+  OHAttributedLabel: 9b2eb99323dee6b3a81ef3bc8e98b084117bca2d
+  Parse-iOS-SDK: f82937a6e1431a49438cd7d9d6199c74228a5846
+  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  SIOSocket: 2facc0bd02ae72d98c223634a46dd8ebdf9be321
+  SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
+
+COCOAPODS: 0.36.4
