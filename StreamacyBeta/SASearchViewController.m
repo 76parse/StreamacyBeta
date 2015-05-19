@@ -11,6 +11,8 @@
 #import "SASearchCollectionViewCell.h"
 #import "SoundCloudAPI.h"
 #import "SASearchUserViewController.h"
+#import "SASwipeButtonSettings.h"
+#import "TrackObject.h"
 
 @interface SASearchViewController ()
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -109,6 +111,7 @@
     else{
         static NSString *identifier = @"Songs";
         SASearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        cell.delegate = self;
         NSDictionary *track = self.tracks[indexPath.row];
         [cell setDisplayForTrack:track];
         return cell;
@@ -122,8 +125,45 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.users count];
+    return self.users.count;
 }
+
+#pragma mark - MGSwipableTableCell Delegate
+
+-(BOOL)swipeTableCell:(MGSwipeTableCell *)cell canSwipe:(MGSwipeDirection)direction
+{
+    return YES;
+}
+
+-(NSArray *)swipeTableCell:(MGSwipeTableCell *)cell swipeButtonsForDirection:(MGSwipeDirection)direction swipeSettings:(MGSwipeSettings *)swipeSettings expansionSettings:(MGSwipeExpansionSettings *)expansionSettings
+{
+    [SASwipeButtonSettings setSwipeSettings:swipeSettings expansionSettings:expansionSettings];
+    if (direction == MGSwipeDirectionLeftToRight) {
+        expansionSettings.expansionColor = [SASwipeButtonSettings leftExpansionColor];
+        return [SASwipeButtonSettings leftButtons];
+    }
+    else{
+        expansionSettings.expansionColor = [SASwipeButtonSettings rightExpansionColor];
+        return [SASwipeButtonSettings rightButtons];
+    }
+}
+
+-(BOOL)swipeTableCell:(MGSwipeTableCell *)cell tappedButtonAtIndex:(NSInteger)index direction:(MGSwipeDirection)direction fromExpansion:(BOOL)fromExpansion
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell *)cell];
+    NSDictionary *selectedTrack = self.tracks[indexPath.row];
+    TrackObject *track = [[TrackObject alloc]initWithData:selectedTrack];
+    if (direction == MGSwipeDirectionLeftToRight) {
+        [SASwipeButtonSettings performActionForLeftSwipeWithTrack:track];
+    }
+    else
+    {
+        [SASwipeButtonSettings performActionForRightSwipeWithTrack:track];
+    }
+    
+    return YES;
+}
+
 
 #pragma mark - CollectionView Delegate/DataSource
 

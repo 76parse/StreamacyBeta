@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MGSwipeTableCell.h"
 
-@interface SASearchTableViewCell : UITableViewCell
+@interface SASearchTableViewCell : MGSwipeTableCell
 @property (strong, nonatomic) IBOutlet UIImageView *coverArtImageView;
 @property (strong, nonatomic) IBOutlet UILabel *trackTitleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *userLabel;

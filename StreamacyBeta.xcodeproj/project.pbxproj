@@ -44,6 +44,9 @@
 		18A1E7871B0BB8310036EA19 /* SASearchUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7861B0BB8310036EA19 /* SASearchUserViewController.m */; };
 		18A1E78A1B0BB8640036EA19 /* SASearchPlaylistCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7891B0BB8640036EA19 /* SASearchPlaylistCollectionViewCell.m */; };
 		18A1E78D1B0BCD4C0036EA19 /* SASearchPlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E78C1B0BCD4C0036EA19 /* SASearchPlaylistViewController.m */; };
+		18A1E7901B0BDEB30036EA19 /* SASwipeButtonSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E78F1B0BDEB30036EA19 /* SASwipeButtonSettings.m */; };
+		18A1E7961B0BDF5F0036EA19 /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7931B0BDF5F0036EA19 /* MGSwipeButton.m */; };
+		18A1E7971B0BDF5F0036EA19 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7951B0BDF5F0036EA19 /* MGSwipeTableCell.m */; };
 		D8D0BBC36C37CCC5AF9A8A3B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F25BF0504A8E95EE20FA02D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +122,12 @@
 		18A1E7891B0BB8640036EA19 /* SASearchPlaylistCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SASearchPlaylistCollectionViewCell.m; sourceTree = "<group>"; };
 		18A1E78B1B0BCD4C0036EA19 /* SASearchPlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASearchPlaylistViewController.h; sourceTree = "<group>"; };
 		18A1E78C1B0BCD4C0036EA19 /* SASearchPlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SASearchPlaylistViewController.m; sourceTree = "<group>"; };
+		18A1E78E1B0BDEB30036EA19 /* SASwipeButtonSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASwipeButtonSettings.h; sourceTree = "<group>"; };
+		18A1E78F1B0BDEB30036EA19 /* SASwipeButtonSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SASwipeButtonSettings.m; sourceTree = "<group>"; };
+		18A1E7921B0BDF5F0036EA19 /* MGSwipeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeButton.h; sourceTree = "<group>"; };
+		18A1E7931B0BDF5F0036EA19 /* MGSwipeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeButton.m; sourceTree = "<group>"; };
+		18A1E7941B0BDF5F0036EA19 /* MGSwipeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeTableCell.h; sourceTree = "<group>"; };
+		18A1E7951B0BDF5F0036EA19 /* MGSwipeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeTableCell.m; sourceTree = "<group>"; };
 		1F25BF0504A8E95EE20FA02D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A5676AF2D9FBCAB445FADF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BE0032CD7B7C36D5843539AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +188,7 @@
 				18A1E7801B0BA2220036EA19 /* APIs */,
 				18A1E7841B0BA2370036EA19 /* Models */,
 				18A1E7741B0BA0760036EA19 /* Helpers */,
+				18A1E7981B0BDF620036EA19 /* MGSwipeTableViewCell */,
 				184D3FA71B0AD22B00A80E1B /* Supporting Files */,
 			);
 			path = StreamacyBeta;
@@ -270,12 +280,7 @@
 				18A1E7861B0BB8310036EA19 /* SASearchUserViewController.m */,
 				184D3FEC1B0AEE4800A80E1B /* SASearchViewController.h */,
 				184D3FED1B0AEE4800A80E1B /* SASearchViewController.m */,
-				18A1E7671B0B93ED0036EA19 /* SASearchTableViewCell.h */,
-				18A1E7681B0B93ED0036EA19 /* SASearchTableViewCell.m */,
-				18A1E7881B0BB8640036EA19 /* SASearchPlaylistCollectionViewCell.h */,
-				18A1E7891B0BB8640036EA19 /* SASearchPlaylistCollectionViewCell.m */,
-				18A1E76E1B0B9C1D0036EA19 /* SASearchCollectionViewCell.h */,
-				18A1E76F1B0B9C1D0036EA19 /* SASearchCollectionViewCell.m */,
+				18A1E7911B0BDEBB0036EA19 /* Custom Cells */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -330,6 +335,32 @@
 				18A1E7821B0BA2330036EA19 /* TrackObject.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		18A1E7911B0BDEBB0036EA19 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				18A1E7671B0B93ED0036EA19 /* SASearchTableViewCell.h */,
+				18A1E7681B0B93ED0036EA19 /* SASearchTableViewCell.m */,
+				18A1E7881B0BB8640036EA19 /* SASearchPlaylistCollectionViewCell.h */,
+				18A1E7891B0BB8640036EA19 /* SASearchPlaylistCollectionViewCell.m */,
+				18A1E76E1B0B9C1D0036EA19 /* SASearchCollectionViewCell.h */,
+				18A1E76F1B0B9C1D0036EA19 /* SASearchCollectionViewCell.m */,
+				18A1E78E1B0BDEB30036EA19 /* SASwipeButtonSettings.h */,
+				18A1E78F1B0BDEB30036EA19 /* SASwipeButtonSettings.m */,
+			);
+			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		18A1E7981B0BDF620036EA19 /* MGSwipeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				18A1E7921B0BDF5F0036EA19 /* MGSwipeButton.h */,
+				18A1E7931B0BDF5F0036EA19 /* MGSwipeButton.m */,
+				18A1E7941B0BDF5F0036EA19 /* MGSwipeTableCell.h */,
+				18A1E7951B0BDF5F0036EA19 /* MGSwipeTableCell.m */,
+			);
+			name = MGSwipeTableViewCell;
 			sourceTree = "<group>";
 		};
 		64076848B5B7E9F1985388BD /* Pods */ = {
@@ -500,6 +531,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A1E77D1B0BA21F0036EA19 /* PlaylistParseAPI.m in Sources */,
+				18A1E7901B0BDEB30036EA19 /* SASwipeButtonSettings.m in Sources */,
+				18A1E7961B0BDF5F0036EA19 /* MGSwipeButton.m in Sources */,
 				18A1E77E1B0BA21F0036EA19 /* TrackParseAPI.m in Sources */,
 				18A1E77F1B0BA21F0036EA19 /* SoundCloudAPI.m in Sources */,
 				18A1E7701B0B9C1D0036EA19 /* SASearchCollectionViewCell.m in Sources */,
@@ -507,6 +540,7 @@
 				18A1E78A1B0BB8640036EA19 /* SASearchPlaylistCollectionViewCell.m in Sources */,
 				184D3FEE1B0AEE4800A80E1B /* SASearchViewController.m in Sources */,
 				184D40011B0AF27900A80E1B /* SAInboxViewController.m in Sources */,
+				18A1E7971B0BDF5F0036EA19 /* MGSwipeTableCell.m in Sources */,
 				184D40041B0AF28800A80E1B /* SAFriendsViewController.m in Sources */,
 				184D3FAD1B0AD22B00A80E1B /* AppDelegate.m in Sources */,
 				184D3FFE1B0AF26800A80E1B /* SAStreamViewController.m in Sources */,
