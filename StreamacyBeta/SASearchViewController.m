@@ -36,7 +36,6 @@
 
 -(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
-    searchBar.showsCancelButton = YES;
 }
 
 -(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
@@ -46,6 +45,7 @@
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [searchBar resignFirstResponder];
+    [self.tableView setContentOffset:CGPointMake(0, 0 - self.tableView.contentInset.top) animated:YES];
     self.tableView.hidden = NO;
     //Get the tracks and users and reload the table view
     NSString *userInput = searchBar.text;
