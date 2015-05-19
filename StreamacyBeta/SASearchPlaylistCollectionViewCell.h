@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SASearchPlaylistCollectionViewCell : UICollectionViewCell
-
+@property (strong, nonatomic) IBOutlet UIImageView *playlistImageView;
+@property (strong, nonatomic) IBOutlet UILabel *playlistNameLabel;
+-(void)setDisplayForPlaylist:(NSDictionary *)playlist;
 @end

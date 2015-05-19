@@ -17,6 +17,7 @@
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 -(void)setCollectionViewDataSourceDelegate:(id<UICollectionViewDataSource, UICollectionViewDelegate>)dataSourceDelegate index:(NSInteger)index;
+@property (strong, nonatomic) IBOutlet UICollectionView *playlistCollectionView;
 
 -(void)setDisplayForTrack:(NSDictionary *)track;
 

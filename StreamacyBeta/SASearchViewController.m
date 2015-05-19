@@ -10,6 +10,7 @@
 #import "SASearchTableViewCell.h"
 #import "SASearchCollectionViewCell.h"
 #import "SoundCloudAPI.h"
+#import "SASearchUserViewController.h"
 
 @interface SASearchViewController ()
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -22,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.hidden = YES;
@@ -133,6 +135,22 @@
     return cell;
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *user = self.users[indexPath.row];
+    [self performSegueWithIdentifier:@"toUserVC" sender:user];
+}
+
+
+#pragma mark - Navigation
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"toUserVC"]) {
+        SASearchUserViewController  *userVC = segue.destinationViewController;
+        userVC.user = sender;
+    }
+}
 
 
 @end

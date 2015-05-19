@@ -67,6 +67,9 @@
     UIImage *streamIcon = [UIImage imageNamed:@"StreamIcon.png"];
     UIImage *streamBackground = [UIImage imageNamed:@"StreamBackground.png"];
     [self addCenterButtonWithImage:streamIcon highlightImage:streamIcon backgroundImage:streamBackground];
+    
+    //Edit the universal navigation controller's appearance
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:.75]];
 
 }
 

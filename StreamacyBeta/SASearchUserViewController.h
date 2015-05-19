@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SASearchUserViewController : UIViewController
-
+@interface SASearchUserViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
+@property (strong, nonatomic) NSDictionary *user;
 @end
