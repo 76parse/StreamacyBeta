@@ -11,6 +11,7 @@
 #import "SASearchPlaylistCollectionViewCell.h"
 #import "SoundCloudAPI.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "SASearchPlaylistViewController.h"
 
 @interface SASearchUserViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *avatarImageView;
@@ -39,6 +40,8 @@
     
     NSString *username = self.user[@"username"];
     self.usernameLabel.text = username;
+    
+    self.navigationItem.title = username;
     
     NSNumber *followersCount = self.user[@"followers_count"];
     NSNumberFormatter *formatter = [NSNumberFormatter new];
@@ -131,7 +134,18 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    NSArray *playlistTracks = self.playlists[indexPath.row][@"tracks"];
+    [self performSegueWithIdentifier:@"toPlaylistVC" sender:playlistTracks];
+}
+
+#pragma mark - Navigation
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"toPlaylistVC"]) {
+        SASearchPlaylistViewController *playlistVC = segue.destinationViewController;
+        playlistVC.tracks = sender;
+    }
 }
 
 
