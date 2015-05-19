@@ -28,8 +28,9 @@
 		184D40151B0AF75200A80E1B /* Inbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184D40101B0AF75200A80E1B /* Inbox@2x.png */; };
 		184D40161B0AF75200A80E1B /* Playlists@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184D40111B0AF75200A80E1B /* Playlists@2x.png */; };
 		184D40171B0AF75200A80E1B /* Search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184D40121B0AF75200A80E1B /* Search@2x.png */; };
-		184D40181B0AF75200A80E1B /* Stream@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184D40131B0AF75200A80E1B /* Stream@2x.png */; };
 		184D401A1B0B02A100A80E1B /* BlackBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184D40191B0B02A100A80E1B /* BlackBack@2x.png */; };
+		18A1E75C1B0B83360036EA19 /* StreamBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A1E75B1B0B83360036EA19 /* StreamBackground@2x.png */; };
+		18A1E7601B0B87970036EA19 /* StreamIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A1E75F1B0B87970036EA19 /* StreamIcon@2x.png */; };
 		D8D0BBC36C37CCC5AF9A8A3B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F25BF0504A8E95EE20FA02D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -76,8 +77,9 @@
 		184D40101B0AF75200A80E1B /* Inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Inbox@2x.png"; sourceTree = "<group>"; };
 		184D40111B0AF75200A80E1B /* Playlists@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Playlists@2x.png"; sourceTree = "<group>"; };
 		184D40121B0AF75200A80E1B /* Search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Search@2x.png"; sourceTree = "<group>"; };
-		184D40131B0AF75200A80E1B /* Stream@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stream@2x.png"; sourceTree = "<group>"; };
 		184D40191B0B02A100A80E1B /* BlackBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BlackBack@2x.png"; sourceTree = "<group>"; };
+		18A1E75B1B0B83360036EA19 /* StreamBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StreamBackground@2x.png"; sourceTree = "<group>"; };
+		18A1E75F1B0B87970036EA19 /* StreamIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StreamIcon@2x.png"; sourceTree = "<group>"; };
 		1F25BF0504A8E95EE20FA02D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A5676AF2D9FBCAB445FADF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BE0032CD7B7C36D5843539AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,12 +145,13 @@
 		184D3FA71B0AD22B00A80E1B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18A1E75F1B0B87970036EA19 /* StreamIcon@2x.png */,
+				18A1E75B1B0B83360036EA19 /* StreamBackground@2x.png */,
 				184D40191B0B02A100A80E1B /* BlackBack@2x.png */,
 				184D400F1B0AF75200A80E1B /* Friends@2x.png */,
 				184D40101B0AF75200A80E1B /* Inbox@2x.png */,
 				184D40111B0AF75200A80E1B /* Playlists@2x.png */,
 				184D40121B0AF75200A80E1B /* Search@2x.png */,
-				184D40131B0AF75200A80E1B /* Stream@2x.png */,
 				184D3FA81B0AD22B00A80E1B /* Info.plist */,
 				184D3FA91B0AD22B00A80E1B /* main.m */,
 			);
@@ -336,11 +339,12 @@
 				184D3FB81B0AD22B00A80E1B /* LaunchScreen.xib in Resources */,
 				184D3FD61B0AD47300A80E1B /* Stream.storyboard in Resources */,
 				184D40161B0AF75200A80E1B /* Playlists@2x.png in Resources */,
+				18A1E7601B0B87970036EA19 /* StreamIcon@2x.png in Resources */,
 				184D3FD51B0AD47300A80E1B /* Search.storyboard in Resources */,
 				184D3FD81B0AD48E00A80E1B /* Main.storyboard in Resources */,
 				184D401A1B0B02A100A80E1B /* BlackBack@2x.png in Resources */,
+				18A1E75C1B0B83360036EA19 /* StreamBackground@2x.png in Resources */,
 				184D3FB51B0AD22B00A80E1B /* Images.xcassets in Resources */,
-				184D40181B0AF75200A80E1B /* Stream@2x.png in Resources */,
 				184D40171B0AF75200A80E1B /* Search@2x.png in Resources */,
 				184D3FD31B0AD47300A80E1B /* Inbox.storyboard in Resources */,
 				184D40141B0AF75200A80E1B /* Friends@2x.png in Resources */,

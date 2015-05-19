@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4BE0311A-2E8F-4731-8100-6823FF6939C3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>StreamacyBeta</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1C71488ED147CCB7D9A9B6D675CDCA8EA5506F79</key>
+		<string>https://github.com/afriedman94/StreamacyBeta.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>StreamacyBeta.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1C71488ED147CCB7D9A9B6D675CDCA8EA5506F79</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/afriedman94/StreamacyBeta.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1C71488ED147CCB7D9A9B6D675CDCA8EA5506F79</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1C71488ED147CCB7D9A9B6D675CDCA8EA5506F79</string>
+			<key>IDESourceControlWCCName</key>
+			<string>StreamacyBeta</string>
+		</dict>
+	</array>
+</dict>
+</plist>
