@@ -55,7 +55,7 @@
 		18A1E7AB1B0C1E9B0036EA19 /* UIViewController+RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7A51B0C1E9B0036EA19 /* UIViewController+RBStoryboardLink.m */; };
 		18A1E7AE1B0C1EFD0036EA19 /* ActionMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A1E7AD1B0C1EFD0036EA19 /* ActionMenu.storyboard */; };
 		18A1E7B11B0C239E0036EA19 /* SAActionMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7B01B0C239E0036EA19 /* SAActionMenuViewController.m */; };
-		18A1E7B51B0C326D0036EA19 /* SACustomModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7B41B0C326D0036EA19 /* SACustomModalSegue.m */; };
+		18A1E7B91B0CFDB90036EA19 /* SAActionSheetAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7B81B0CFDB90036EA19 /* SAActionSheetAnimator.m */; };
 		D8D0BBC36C37CCC5AF9A8A3B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F25BF0504A8E95EE20FA02D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -153,8 +153,8 @@
 		18A1E7AD1B0C1EFD0036EA19 /* ActionMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActionMenu.storyboard; sourceTree = "<group>"; };
 		18A1E7AF1B0C239E0036EA19 /* SAActionMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAActionMenuViewController.h; sourceTree = "<group>"; };
 		18A1E7B01B0C239E0036EA19 /* SAActionMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAActionMenuViewController.m; sourceTree = "<group>"; };
-		18A1E7B31B0C326D0036EA19 /* SACustomModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SACustomModalSegue.h; sourceTree = "<group>"; };
-		18A1E7B41B0C326D0036EA19 /* SACustomModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SACustomModalSegue.m; sourceTree = "<group>"; };
+		18A1E7B71B0CFDB90036EA19 /* SAActionSheetAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAActionSheetAnimator.h; sourceTree = "<group>"; };
+		18A1E7B81B0CFDB90036EA19 /* SAActionSheetAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAActionSheetAnimator.m; sourceTree = "<group>"; };
 		1F25BF0504A8E95EE20FA02D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A5676AF2D9FBCAB445FADF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BE0032CD7B7C36D5843539AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -410,8 +410,8 @@
 				18A1E7AD1B0C1EFD0036EA19 /* ActionMenu.storyboard */,
 				18A1E7AF1B0C239E0036EA19 /* SAActionMenuViewController.h */,
 				18A1E7B01B0C239E0036EA19 /* SAActionMenuViewController.m */,
-				18A1E7B31B0C326D0036EA19 /* SACustomModalSegue.h */,
-				18A1E7B41B0C326D0036EA19 /* SACustomModalSegue.m */,
+				18A1E7B71B0CFDB90036EA19 /* SAActionSheetAnimator.h */,
+				18A1E7B81B0CFDB90036EA19 /* SAActionSheetAnimator.m */,
 			);
 			name = ActionMenu;
 			sourceTree = "<group>";
@@ -604,10 +604,10 @@
 				18A1E7901B0BDEB30036EA19 /* SASwipeButtonSettings.m in Sources */,
 				18A1E7961B0BDF5F0036EA19 /* MGSwipeButton.m in Sources */,
 				18A1E77E1B0BA21F0036EA19 /* TrackParseAPI.m in Sources */,
+				18A1E7B91B0CFDB90036EA19 /* SAActionSheetAnimator.m in Sources */,
 				18A1E77F1B0BA21F0036EA19 /* SoundCloudAPI.m in Sources */,
 				18A1E7701B0B9C1D0036EA19 /* SASearchCollectionViewCell.m in Sources */,
 				18A1E7731B0BA0720036EA19 /* Helpers.m in Sources */,
-				18A1E7B51B0C326D0036EA19 /* SACustomModalSegue.m in Sources */,
 				18A1E78A1B0BB8640036EA19 /* SASearchPlaylistCollectionViewCell.m in Sources */,
 				18A1E7A71B0C1E9B0036EA19 /* RBStoryboardModalSegue.m in Sources */,
 				184D3FEE1B0AEE4800A80E1B /* SASearchViewController.m in Sources */,

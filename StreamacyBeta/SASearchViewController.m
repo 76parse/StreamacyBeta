@@ -14,12 +14,16 @@
 #import "TrackObject.h"
 #import "RBStoryboardLink.h"
 #import "SAActionMenuViewController.h"
+#import "Helpers.h"
 
 @interface SASearchViewController ()
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *tracks;
 @property (strong, nonatomic) NSMutableArray *users;
+@property (strong, nonatomic) UIImageView *expandedImageView;
+@property (nonatomic, assign) BOOL imageIsExpanded;
+@property (nonatomic) CGRect imagePoint;
 @end
 
 @implementation SASearchViewController
@@ -35,6 +39,12 @@
     
     self.tracks = [[NSMutableArray alloc]init];
     self.users = [[NSMutableArray alloc]init];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
 }
 
 #pragma mark - Search Bar Delegate
@@ -186,13 +196,38 @@
 
 #pragma mark - Search Cell Delegate
 
--(void)plusButtonPressedOnCell:(UITableViewCell *)cell
+-(void)plusButtonPressedOnCell:(SASearchTableViewCell *)cell
 {
-//    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-//    NSDictionary *track = self.tracks[indexPath.row];
-//    NSString *title = track[@"title"];
-    [self performSegueWithIdentifier:@"toActionVC" sender:nil];
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    NSDictionary *track = self.tracks[indexPath.row];
+    NSString *title = track[@"title"];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ActionMenu" bundle:nil];
+    SAActionMenuViewController *actionMenuVC = (SAActionMenuViewController *)[storyboard instantiateInitialViewController];
+    actionMenuVC.labelText = title;
+    
+    actionMenuVC.transitioningDelegate = self;
+    actionMenuVC.modalPresentationStyle = UIModalPresentationCustom;
+    [self presentViewController:actionMenuVC animated:YES completion:^{
+        //animations
+    }];
 }
+
+#pragma mark - Animated Transitioning Delegate
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                  presentingController:(UIViewController *)presenting
+                                                                      sourceController:(UIViewController *)source {
+    
+    SAActionSheetAnimator *animator = [SAActionSheetAnimator new];
+    animator.presenting = YES;
+    return animator;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    SAActionSheetAnimator *animator = [SAActionSheetAnimator new];
+    return animator;
+}
+
 
 
 #pragma mark - Navigation
@@ -202,13 +237,6 @@
     if ([segue.identifier isEqualToString:@"toUserVC"]) {
         SASearchUserViewController  *userVC = segue.destinationViewController;
         userVC.user = sender;
-    }
-    else if ([segue.identifier isEqualToString:@"toActionVC"])
-    {
-//        RBStoryboardLink *link = (RBStoryboardLink *)segue.destinationViewController;
-//        NSLog(@"%@", link.scene);
-//        SAActionMenuViewController *actionVC = (SAActionMenuViewController *)link.scene;
-//        actionVC.labelText = sender;
     }
 }
 

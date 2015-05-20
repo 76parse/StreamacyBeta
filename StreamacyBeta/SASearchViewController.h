@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "MGSwipeTableCell.h"
 #import "SASearchTableViewCell.h"
+#import "SAActionSheetAnimator.h"
 
-@interface SASearchViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate, MGSwipeTableCellDelegate, SearchCellDelegate>
+@interface SASearchViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate, MGSwipeTableCellDelegate, SearchCellDelegate, UIViewControllerTransitioningDelegate>
 
 @end

@@ -169,7 +169,6 @@
     {
         [SASwipeButtonSettings performActionForRightSwipeWithTrack:track];
     }
-    
     return YES;
 }
 

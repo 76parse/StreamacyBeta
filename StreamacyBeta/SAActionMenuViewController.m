@@ -22,14 +22,14 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     self.label.text = self.labelText;
 
 }
 
 - (IBAction)exitButtonPressed:(UIButton *)sender
 {
-    [self dismissViewControllerAnimated:NO completion:^{
-        //completion
+    [self dismissViewControllerAnimated:YES completion:^{
     }];
 }
 @end
