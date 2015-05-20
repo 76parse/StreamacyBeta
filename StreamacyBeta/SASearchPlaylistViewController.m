@@ -7,7 +7,6 @@
 //
 
 #import "SASearchPlaylistViewController.h"
-#import "SASearchTableViewCell.h"
 
 @interface SASearchPlaylistViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -92,6 +91,5 @@
     
     return YES;
 }
-
 
 @end

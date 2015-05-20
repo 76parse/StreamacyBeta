@@ -9,7 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "MGSwipeTableCell.h"
 
+@protocol SearchCellDelegate <NSObject>
+@optional
+-(void)plusButtonPressedOnCell:(UITableViewCell *)cell;
+@end
+
 @interface SASearchTableViewCell : MGSwipeTableCell
+
+@property (weak, nonatomic) id searchDelegate;
+
 @property (strong, nonatomic) IBOutlet UIImageView *coverArtImageView;
 @property (strong, nonatomic) IBOutlet UILabel *trackTitleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *userLabel;

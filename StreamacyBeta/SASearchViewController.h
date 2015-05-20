@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "MGSwipeTableCell.h"
+#import "SASearchTableViewCell.h"
 
-@interface SASearchViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate, MGSwipeTableCellDelegate>
+@interface SASearchViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate, MGSwipeTableCellDelegate, SearchCellDelegate>
 
 @end

@@ -7,12 +7,13 @@
 //
 
 #import "SASearchViewController.h"
-#import "SASearchTableViewCell.h"
 #import "SASearchCollectionViewCell.h"
 #import "SoundCloudAPI.h"
 #import "SASearchUserViewController.h"
 #import "SASwipeButtonSettings.h"
 #import "TrackObject.h"
+#import "RBStoryboardLink.h"
+#import "SAActionMenuViewController.h"
 
 @interface SASearchViewController ()
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -112,6 +113,7 @@
         static NSString *identifier = @"Songs";
         SASearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
         cell.delegate = self;
+        cell.searchDelegate = self;
         NSDictionary *track = self.tracks[indexPath.row];
         [cell setDisplayForTrack:track];
         return cell;
@@ -182,6 +184,16 @@
     [self performSegueWithIdentifier:@"toUserVC" sender:user];
 }
 
+#pragma mark - Search Cell Delegate
+
+-(void)plusButtonPressedOnCell:(UITableViewCell *)cell
+{
+//    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+//    NSDictionary *track = self.tracks[indexPath.row];
+//    NSString *title = track[@"title"];
+    [self performSegueWithIdentifier:@"toActionVC" sender:nil];
+}
+
 
 #pragma mark - Navigation
 
@@ -190,6 +202,13 @@
     if ([segue.identifier isEqualToString:@"toUserVC"]) {
         SASearchUserViewController  *userVC = segue.destinationViewController;
         userVC.user = sender;
+    }
+    else if ([segue.identifier isEqualToString:@"toActionVC"])
+    {
+//        RBStoryboardLink *link = (RBStoryboardLink *)segue.destinationViewController;
+//        NSLog(@"%@", link.scene);
+//        SAActionMenuViewController *actionVC = (SAActionMenuViewController *)link.scene;
+//        actionVC.labelText = sender;
     }
 }
 

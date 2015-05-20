@@ -47,6 +47,15 @@
 		18A1E7901B0BDEB30036EA19 /* SASwipeButtonSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E78F1B0BDEB30036EA19 /* SASwipeButtonSettings.m */; };
 		18A1E7961B0BDF5F0036EA19 /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7931B0BDF5F0036EA19 /* MGSwipeButton.m */; };
 		18A1E7971B0BDF5F0036EA19 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7951B0BDF5F0036EA19 /* MGSwipeTableCell.m */; };
+		18A1E7A61B0C1E9B0036EA19 /* RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E79A1B0C1E9B0036EA19 /* RBStoryboardLink.m */; };
+		18A1E7A71B0C1E9B0036EA19 /* RBStoryboardModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E79D1B0C1E9B0036EA19 /* RBStoryboardModalSegue.m */; };
+		18A1E7A81B0C1E9B0036EA19 /* RBStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E79F1B0C1E9B0036EA19 /* RBStoryboardPopoverSegue.m */; };
+		18A1E7A91B0C1E9B0036EA19 /* RBStoryboardPushSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7A11B0C1E9B0036EA19 /* RBStoryboardPushSegue.m */; };
+		18A1E7AA1B0C1E9B0036EA19 /* RBStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7A31B0C1E9B0036EA19 /* RBStoryboardSegue.m */; };
+		18A1E7AB1B0C1E9B0036EA19 /* UIViewController+RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7A51B0C1E9B0036EA19 /* UIViewController+RBStoryboardLink.m */; };
+		18A1E7AE1B0C1EFD0036EA19 /* ActionMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A1E7AD1B0C1EFD0036EA19 /* ActionMenu.storyboard */; };
+		18A1E7B11B0C239E0036EA19 /* SAActionMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7B01B0C239E0036EA19 /* SAActionMenuViewController.m */; };
+		18A1E7B51B0C326D0036EA19 /* SACustomModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7B41B0C326D0036EA19 /* SACustomModalSegue.m */; };
 		D8D0BBC36C37CCC5AF9A8A3B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F25BF0504A8E95EE20FA02D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +137,24 @@
 		18A1E7931B0BDF5F0036EA19 /* MGSwipeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeButton.m; sourceTree = "<group>"; };
 		18A1E7941B0BDF5F0036EA19 /* MGSwipeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeTableCell.h; sourceTree = "<group>"; };
 		18A1E7951B0BDF5F0036EA19 /* MGSwipeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeTableCell.m; sourceTree = "<group>"; };
+		18A1E7991B0C1E9A0036EA19 /* RBStoryboardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardLink.h; sourceTree = "<group>"; };
+		18A1E79A1B0C1E9B0036EA19 /* RBStoryboardLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardLink.m; sourceTree = "<group>"; };
+		18A1E79B1B0C1E9B0036EA19 /* RBStoryboardLinkSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardLinkSource.h; sourceTree = "<group>"; };
+		18A1E79C1B0C1E9B0036EA19 /* RBStoryboardModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardModalSegue.h; sourceTree = "<group>"; };
+		18A1E79D1B0C1E9B0036EA19 /* RBStoryboardModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardModalSegue.m; sourceTree = "<group>"; };
+		18A1E79E1B0C1E9B0036EA19 /* RBStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardPopoverSegue.h; sourceTree = "<group>"; };
+		18A1E79F1B0C1E9B0036EA19 /* RBStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardPopoverSegue.m; sourceTree = "<group>"; };
+		18A1E7A01B0C1E9B0036EA19 /* RBStoryboardPushSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardPushSegue.h; sourceTree = "<group>"; };
+		18A1E7A11B0C1E9B0036EA19 /* RBStoryboardPushSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardPushSegue.m; sourceTree = "<group>"; };
+		18A1E7A21B0C1E9B0036EA19 /* RBStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardSegue.h; sourceTree = "<group>"; };
+		18A1E7A31B0C1E9B0036EA19 /* RBStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardSegue.m; sourceTree = "<group>"; };
+		18A1E7A41B0C1E9B0036EA19 /* UIViewController+RBStoryboardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RBStoryboardLink.h"; sourceTree = "<group>"; };
+		18A1E7A51B0C1E9B0036EA19 /* UIViewController+RBStoryboardLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RBStoryboardLink.m"; sourceTree = "<group>"; };
+		18A1E7AD1B0C1EFD0036EA19 /* ActionMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActionMenu.storyboard; sourceTree = "<group>"; };
+		18A1E7AF1B0C239E0036EA19 /* SAActionMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAActionMenuViewController.h; sourceTree = "<group>"; };
+		18A1E7B01B0C239E0036EA19 /* SAActionMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAActionMenuViewController.m; sourceTree = "<group>"; };
+		18A1E7B31B0C326D0036EA19 /* SACustomModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SACustomModalSegue.h; sourceTree = "<group>"; };
+		18A1E7B41B0C326D0036EA19 /* SACustomModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SACustomModalSegue.m; sourceTree = "<group>"; };
 		1F25BF0504A8E95EE20FA02D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A5676AF2D9FBCAB445FADF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BE0032CD7B7C36D5843539AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -188,7 +215,6 @@
 				18A1E7801B0BA2220036EA19 /* APIs */,
 				18A1E7841B0BA2370036EA19 /* Models */,
 				18A1E7741B0BA0760036EA19 /* Helpers */,
-				18A1E7981B0BDF620036EA19 /* MGSwipeTableViewCell */,
 				184D3FA71B0AD22B00A80E1B /* Supporting Files */,
 			);
 			path = StreamacyBeta;
@@ -197,16 +223,10 @@
 		184D3FA71B0AD22B00A80E1B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18A1E7981B0BDF620036EA19 /* MGSwipeTableViewCell */,
+				18A1E7AC1B0C1EAA0036EA19 /* RBStoryboardSegue */,
 				18A1E7661B0B90990036EA19 /* Fonts */,
-				18A1E7751B0BA12C0036EA19 /* no-album-art.png */,
-				18A1E7611B0B8FC40036EA19 /* SearchBig@2x.png */,
-				18A1E75F1B0B87970036EA19 /* StreamIcon@2x.png */,
-				18A1E75B1B0B83360036EA19 /* StreamBackground@2x.png */,
-				184D40191B0B02A100A80E1B /* BlackBack@2x.png */,
-				184D400F1B0AF75200A80E1B /* Friends@2x.png */,
-				184D40101B0AF75200A80E1B /* Inbox@2x.png */,
-				184D40111B0AF75200A80E1B /* Playlists@2x.png */,
-				184D40121B0AF75200A80E1B /* Search@2x.png */,
+				18A1E7B61B0C340E0036EA19 /* Images/Icons */,
 				184D3FA81B0AD22B00A80E1B /* Info.plist */,
 				184D3FA91B0AD22B00A80E1B /* main.m */,
 			);
@@ -273,6 +293,7 @@
 		184D3FE01B0AD6B600A80E1B /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				18A1E7B21B0C23A50036EA19 /* ActionMenu */,
 				184D3FD01B0AD47300A80E1B /* Search.storyboard */,
 				18A1E78B1B0BCD4C0036EA19 /* SASearchPlaylistViewController.h */,
 				18A1E78C1B0BCD4C0036EA19 /* SASearchPlaylistViewController.m */,
@@ -361,6 +382,54 @@
 				18A1E7951B0BDF5F0036EA19 /* MGSwipeTableCell.m */,
 			);
 			name = MGSwipeTableViewCell;
+			sourceTree = "<group>";
+		};
+		18A1E7AC1B0C1EAA0036EA19 /* RBStoryboardSegue */ = {
+			isa = PBXGroup;
+			children = (
+				18A1E7991B0C1E9A0036EA19 /* RBStoryboardLink.h */,
+				18A1E79A1B0C1E9B0036EA19 /* RBStoryboardLink.m */,
+				18A1E79B1B0C1E9B0036EA19 /* RBStoryboardLinkSource.h */,
+				18A1E79C1B0C1E9B0036EA19 /* RBStoryboardModalSegue.h */,
+				18A1E79D1B0C1E9B0036EA19 /* RBStoryboardModalSegue.m */,
+				18A1E79E1B0C1E9B0036EA19 /* RBStoryboardPopoverSegue.h */,
+				18A1E79F1B0C1E9B0036EA19 /* RBStoryboardPopoverSegue.m */,
+				18A1E7A01B0C1E9B0036EA19 /* RBStoryboardPushSegue.h */,
+				18A1E7A11B0C1E9B0036EA19 /* RBStoryboardPushSegue.m */,
+				18A1E7A21B0C1E9B0036EA19 /* RBStoryboardSegue.h */,
+				18A1E7A31B0C1E9B0036EA19 /* RBStoryboardSegue.m */,
+				18A1E7A41B0C1E9B0036EA19 /* UIViewController+RBStoryboardLink.h */,
+				18A1E7A51B0C1E9B0036EA19 /* UIViewController+RBStoryboardLink.m */,
+			);
+			name = RBStoryboardSegue;
+			sourceTree = "<group>";
+		};
+		18A1E7B21B0C23A50036EA19 /* ActionMenu */ = {
+			isa = PBXGroup;
+			children = (
+				18A1E7AD1B0C1EFD0036EA19 /* ActionMenu.storyboard */,
+				18A1E7AF1B0C239E0036EA19 /* SAActionMenuViewController.h */,
+				18A1E7B01B0C239E0036EA19 /* SAActionMenuViewController.m */,
+				18A1E7B31B0C326D0036EA19 /* SACustomModalSegue.h */,
+				18A1E7B41B0C326D0036EA19 /* SACustomModalSegue.m */,
+			);
+			name = ActionMenu;
+			sourceTree = "<group>";
+		};
+		18A1E7B61B0C340E0036EA19 /* Images/Icons */ = {
+			isa = PBXGroup;
+			children = (
+				18A1E7751B0BA12C0036EA19 /* no-album-art.png */,
+				18A1E7611B0B8FC40036EA19 /* SearchBig@2x.png */,
+				18A1E75F1B0B87970036EA19 /* StreamIcon@2x.png */,
+				18A1E75B1B0B83360036EA19 /* StreamBackground@2x.png */,
+				184D40191B0B02A100A80E1B /* BlackBack@2x.png */,
+				184D400F1B0AF75200A80E1B /* Friends@2x.png */,
+				184D40101B0AF75200A80E1B /* Inbox@2x.png */,
+				184D40111B0AF75200A80E1B /* Playlists@2x.png */,
+				184D40121B0AF75200A80E1B /* Search@2x.png */,
+			);
+			name = Images/Icons;
 			sourceTree = "<group>";
 		};
 		64076848B5B7E9F1985388BD /* Pods */ = {
@@ -469,6 +538,7 @@
 				184D40161B0AF75200A80E1B /* Playlists@2x.png in Resources */,
 				18A1E7621B0B8FC40036EA19 /* SearchBig@2x.png in Resources */,
 				18A1E7601B0B87970036EA19 /* StreamIcon@2x.png in Resources */,
+				18A1E7AE1B0C1EFD0036EA19 /* ActionMenu.storyboard in Resources */,
 				184D3FD51B0AD47300A80E1B /* Search.storyboard in Resources */,
 				184D3FD81B0AD48E00A80E1B /* Main.storyboard in Resources */,
 				184D401A1B0B02A100A80E1B /* BlackBack@2x.png in Resources */,
@@ -537,19 +607,27 @@
 				18A1E77F1B0BA21F0036EA19 /* SoundCloudAPI.m in Sources */,
 				18A1E7701B0B9C1D0036EA19 /* SASearchCollectionViewCell.m in Sources */,
 				18A1E7731B0BA0720036EA19 /* Helpers.m in Sources */,
+				18A1E7B51B0C326D0036EA19 /* SACustomModalSegue.m in Sources */,
 				18A1E78A1B0BB8640036EA19 /* SASearchPlaylistCollectionViewCell.m in Sources */,
+				18A1E7A71B0C1E9B0036EA19 /* RBStoryboardModalSegue.m in Sources */,
 				184D3FEE1B0AEE4800A80E1B /* SASearchViewController.m in Sources */,
 				184D40011B0AF27900A80E1B /* SAInboxViewController.m in Sources */,
 				18A1E7971B0BDF5F0036EA19 /* MGSwipeTableCell.m in Sources */,
 				184D40041B0AF28800A80E1B /* SAFriendsViewController.m in Sources */,
 				184D3FAD1B0AD22B00A80E1B /* AppDelegate.m in Sources */,
+				18A1E7A81B0C1E9B0036EA19 /* RBStoryboardPopoverSegue.m in Sources */,
 				184D3FFE1B0AF26800A80E1B /* SAStreamViewController.m in Sources */,
 				184D3FAA1B0AD22B00A80E1B /* main.m in Sources */,
 				184D3FFB1B0AF25200A80E1B /* SAPlaylistsViewController.m in Sources */,
+				18A1E7A61B0C1E9B0036EA19 /* RBStoryboardLink.m in Sources */,
 				18A1E7831B0BA2330036EA19 /* TrackObject.m in Sources */,
+				18A1E7AA1B0C1E9B0036EA19 /* RBStoryboardSegue.m in Sources */,
+				18A1E7B11B0C239E0036EA19 /* SAActionMenuViewController.m in Sources */,
 				18A1E78D1B0BCD4C0036EA19 /* SASearchPlaylistViewController.m in Sources */,
 				184D3FDB1B0AD49F00A80E1B /* SATabBarController.m in Sources */,
 				18A1E7691B0B93ED0036EA19 /* SASearchTableViewCell.m in Sources */,
+				18A1E7AB1B0C1E9B0036EA19 /* UIViewController+RBStoryboardLink.m in Sources */,
+				18A1E7A91B0C1E9B0036EA19 /* RBStoryboardPushSegue.m in Sources */,
 				18A1E7871B0BB8310036EA19 /* SASearchUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

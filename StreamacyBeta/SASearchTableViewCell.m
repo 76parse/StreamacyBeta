@@ -43,6 +43,8 @@
 }
 
 
-- (IBAction)plusButtonPressed:(UIButton *)sender {
+- (IBAction)plusButtonPressed:(UIButton *)sender
+{
+    [self.searchDelegate plusButtonPressedOnCell:self];
 }
 @end

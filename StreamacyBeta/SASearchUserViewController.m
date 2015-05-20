@@ -50,7 +50,7 @@
     self.followerCountLabel.text = formatted;
     
     NSString *userID = self.user[@"id"];
-    [SoundCloudAPI getPlaylistsWithUser:userID allPlaylists:NO withCompletion:^(NSMutableArray *playlists) {
+    [SoundCloudAPI getPlaylistsWithUser:userID allPlaylists:YES withCompletion:^(NSMutableArray *playlists) {
         self.playlists = playlists;
         [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:
          UITableViewRowAnimationFade];
@@ -61,7 +61,6 @@
         [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:
          UITableViewRowAnimationFade];
     }];
-
 
 }
 
@@ -184,7 +183,5 @@
         playlistVC.playlist = sender;
     }
 }
-
-
 
 @end
