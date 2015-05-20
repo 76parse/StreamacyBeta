@@ -40,8 +40,8 @@
     NSString *durationString = [Helpers timeFormatted:duration];
     self.durationLabel.text = durationString;
     NSString *urlString = track[@"artwork_url"];
-    NSString *highRes = [urlString stringByReplacingOccurrencesOfString:@"large" withString:@"crop"];
     if (![urlString isEqual:[NSNull null]]) {
+        NSString *highRes = [urlString stringByReplacingOccurrencesOfString:@"large" withString:@"crop"];
         NSURL *artURL = [NSURL URLWithString:highRes];
         [self.coverArtImageView sd_setImageWithURL:artURL];
     }
@@ -55,7 +55,7 @@
     [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
     NSString *playbackformatted = [formatter stringFromNumber:playbackCount];
     
-    NSString *triangle = [NSString stringWithCString:"\u25B6" encoding:NSUTF8StringEncoding];
+    NSString *triangle = [NSString stringWithCString:"\u25BA" encoding:NSUTF8StringEncoding];
     self.playCountLabel.text = [NSString stringWithFormat:@"%@ %@", triangle, playbackformatted];
     
 }

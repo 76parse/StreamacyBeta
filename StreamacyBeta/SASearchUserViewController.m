@@ -7,11 +7,12 @@
 //
 
 #import "SASearchUserViewController.h"
-#import "SASearchTableViewCell.h"
 #import "SASearchPlaylistCollectionViewCell.h"
 #import "SoundCloudAPI.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "SASearchPlaylistViewController.h"
+#import "SAActionMenuViewController.h"
+#import "SAActionSheetAnimator.h"
 
 @interface SASearchUserViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *avatarImageView;
@@ -104,6 +105,7 @@
         static NSString *identifier = @"Songs";
         SASearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
         cell.delegate = self;
+        cell.searchDelegate = self;
         NSDictionary *track = self.tracks[indexPath.row];
         [cell setDisplayForTrack:track];
         return cell;
@@ -170,6 +172,38 @@
         [SASwipeButtonSettings performActionForRightSwipeWithTrack:track];
     }
     return YES;
+}
+
+#pragma mark - Search Cell Delegate
+
+-(void)plusButtonPressedOnCell:(SASearchTableViewCell *)cell
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    NSDictionary *track = self.tracks[indexPath.row];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ActionMenu" bundle:nil];
+    SAActionMenuViewController *actionMenuVC = (SAActionMenuViewController *)[storyboard instantiateInitialViewController];
+    actionMenuVC.track = track;
+    actionMenuVC.transitioningDelegate = self;
+    actionMenuVC.modalPresentationStyle = UIModalPresentationCustom;
+    [self presentViewController:actionMenuVC animated:YES completion:^{
+        //animations
+    }];
+}
+
+#pragma mark - Animated Transitioning Delegate
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                  presentingController:(UIViewController *)presenting
+                                                                      sourceController:(UIViewController *)source {
+    
+    SAActionSheetAnimator *animator = [SAActionSheetAnimator new];
+    animator.presenting = YES;
+    return animator;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    SAActionSheetAnimator *animator = [SAActionSheetAnimator new];
+    return animator;
 }
 
 

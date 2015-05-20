@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "SASwipeButtonSettings.h"
 #import "MGSwipeTableCell.h"
+#import "SASearchTableViewCell.h"
 
-@interface SASearchUserViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, MGSwipeTableCellDelegate>
+@interface SASearchUserViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, MGSwipeTableCellDelegate, UIViewControllerTransitioningDelegate, SearchCellDelegate>
 @property (strong, nonatomic) NSDictionary *user;
 @end

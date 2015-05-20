@@ -55,10 +55,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;3,320" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbI-Xx-fGM">
-                                        <rect key="frame" x="29" y="307" width="90" height="21"/>
+                                        <rect key="frame" x="29" y="307" width="124" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="G7W-j9-Xm0"/>
-                                            <constraint firstAttribute="width" constant="90" id="bYo-he-mU8"/>
+                                            <constraint firstAttribute="width" constant="124" id="bYo-he-mU8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                         <color key="textColor" red="0.55392551422119141" green="0.55463069677352905" blue="0.58136355876922607" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
@@ -114,11 +114,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVH-vg-L2X">
-                                <rect key="frame" x="16" y="455" width="288" height="44"/>
+                                <rect key="frame" x="16" y="454" width="288" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <state key="normal" title="Queue">
-                                    <color key="titleColor" red="0.22909101843833923" green="0.228493332862854" blue="0.22843611240386963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.48253428936004639" green="0.47556769847869873" blue="0.50886929035186768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -135,7 +135,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <state key="normal" title="Send">
-                                    <color key="titleColor" red="0.22892874479293823" green="0.22802069783210754" blue="0.22795844078063965" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.48253428936004639" green="0.47556769847869873" blue="0.50886929035186768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -148,11 +148,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYP-Sy-1yz">
-                                <rect key="frame" x="16" y="361" width="288" height="44"/>
+                                <rect key="frame" x="16" y="362" width="288" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <state key="normal" title="Save">
-                                    <color key="titleColor" red="0.20762941241264343" green="0.20684924721717834" blue="0.2067926824092865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.40784313725490196" green="0.40000000000000002" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>

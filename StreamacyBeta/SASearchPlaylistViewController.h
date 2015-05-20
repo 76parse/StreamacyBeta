@@ -11,6 +11,6 @@
 #import "MGSwipeTableCell.h"
 #import "SASearchTableViewCell.h"
 
-@interface SASearchPlaylistViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,MGSwipeTableCellDelegate, SearchCellDelegate>
+@interface SASearchPlaylistViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,MGSwipeTableCellDelegate, SearchCellDelegate, UIViewControllerTransitioningDelegate>
 @property (strong, nonatomic) NSDictionary *playlist;
 @end
