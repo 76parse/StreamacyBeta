@@ -10,5 +10,5 @@
 #import "RBStoryboardLink.h"
 
 @interface SAActionMenuViewController : UIViewController
-@property (strong, nonatomic) NSString *labelText;
+@property (strong, nonatomic) NSDictionary *track;
 @end

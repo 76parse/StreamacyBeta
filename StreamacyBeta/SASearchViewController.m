@@ -200,11 +200,9 @@
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     NSDictionary *track = self.tracks[indexPath.row];
-    NSString *title = track[@"title"];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ActionMenu" bundle:nil];
     SAActionMenuViewController *actionMenuVC = (SAActionMenuViewController *)[storyboard instantiateInitialViewController];
-    actionMenuVC.labelText = title;
-    
+    actionMenuVC.track = track;
     actionMenuVC.transitioningDelegate = self;
     actionMenuVC.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:actionMenuVC animated:YES completion:^{

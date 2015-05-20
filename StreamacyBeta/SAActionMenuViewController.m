@@ -7,9 +7,16 @@
 //
 
 #import "SAActionMenuViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "Helpers.h"
 
 @interface SAActionMenuViewController ()
-@property (strong, nonatomic) IBOutlet UILabel *label;
+@property (strong, nonatomic) IBOutlet UIImageView *coverArtImageView;
+@property (strong, nonatomic) IBOutlet UILabel *trackTitleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *usernnameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *durationLabel;
+@property (strong, nonatomic) IBOutlet UILabel *playCountLabel;
+@property (strong, nonatomic) IBOutlet UIView *trackInfoView;
 - (IBAction)exitButtonPressed:(UIButton *)sender;
 @end
 
@@ -17,14 +24,51 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    for (UIButton *button in self.view.subviews) {
+        button.layer.borderColor = [UIColor colorWithRed:0.784 green:0.778 blue:0.801 alpha:1].CGColor;
+    }
+    
+    self.trackInfoView.layer.borderColor = [UIColor colorWithRed:0.784 green:0.778 blue:0.801 alpha:1].CGColor;
+    
+    NSDictionary *track = self.track;
+    //Populate the cell with the data recieved from the search.
+    self.trackTitleLabel.text = track[@"title"];
+    self.usernnameLabel.text = track[@"user"][@"username"];
+    //Format the tracks duration into a string and set the label.
+    int duration = [[track objectForKey:@"duration"]intValue];
+    NSString *durationString = [Helpers timeFormatted:duration];
+    self.durationLabel.text = durationString;
+    NSString *urlString = track[@"artwork_url"];
+    NSString *highRes = [urlString stringByReplacingOccurrencesOfString:@"large" withString:@"crop"];
+    if (![urlString isEqual:[NSNull null]]) {
+        NSURL *artURL = [NSURL URLWithString:highRes];
+        [self.coverArtImageView sd_setImageWithURL:artURL];
+    }
+    else
+    {
+        [self.coverArtImageView setImage:[UIImage imageNamed:@"no-album-art.png"]];
+    }
+    
+    NSNumber *playbackCount = track[@"playback_count"];
+    NSNumberFormatter *formatter = [NSNumberFormatter new];
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSString *playbackformatted = [formatter stringFromNumber:playbackCount];
+    
+    NSString *triangle = [NSString stringWithCString:"\u25B6" encoding:NSUTF8StringEncoding];
+    self.playCountLabel.text = [NSString stringWithFormat:@"%@ %@", triangle, playbackformatted];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    self.label.text = self.labelText;
 
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 - (IBAction)exitButtonPressed:(UIButton *)sender
