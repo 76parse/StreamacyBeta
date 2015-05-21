@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SAPlaylistsViewController : UIViewController
+@interface SAPlaylistsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 
 @end

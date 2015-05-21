@@ -56,6 +56,7 @@
 		18A1E7AE1B0C1EFD0036EA19 /* ActionMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A1E7AD1B0C1EFD0036EA19 /* ActionMenu.storyboard */; };
 		18A1E7B11B0C239E0036EA19 /* SAActionMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7B01B0C239E0036EA19 /* SAActionMenuViewController.m */; };
 		18A1E7B91B0CFDB90036EA19 /* SAActionSheetAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7B81B0CFDB90036EA19 /* SAActionSheetAnimator.m */; };
+		18A1E7BC1B0E3E1A0036EA19 /* SAPlaylistsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7BB1B0E3E1A0036EA19 /* SAPlaylistsTableViewCell.m */; };
 		D8D0BBC36C37CCC5AF9A8A3B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F25BF0504A8E95EE20FA02D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +156,8 @@
 		18A1E7B01B0C239E0036EA19 /* SAActionMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAActionMenuViewController.m; sourceTree = "<group>"; };
 		18A1E7B71B0CFDB90036EA19 /* SAActionSheetAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAActionSheetAnimator.h; sourceTree = "<group>"; };
 		18A1E7B81B0CFDB90036EA19 /* SAActionSheetAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAActionSheetAnimator.m; sourceTree = "<group>"; };
+		18A1E7BA1B0E3E1A0036EA19 /* SAPlaylistsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAPlaylistsTableViewCell.h; sourceTree = "<group>"; };
+		18A1E7BB1B0E3E1A0036EA19 /* SAPlaylistsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAPlaylistsTableViewCell.m; sourceTree = "<group>"; };
 		1F25BF0504A8E95EE20FA02D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A5676AF2D9FBCAB445FADF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BE0032CD7B7C36D5843539AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +209,7 @@
 				184D3FAC1B0AD22B00A80E1B /* AppDelegate.m */,
 				184D3FDC1B0AD69800A80E1B /* Main/TabBar */,
 				184D3FDF1B0AD6B000A80E1B /* Playlists */,
+				18A1E7B21B0C23A50036EA19 /* ActionMenu */,
 				184D3FE01B0AD6B600A80E1B /* Search */,
 				184D3FE11B0AD6BB00A80E1B /* Stream */,
 				184D3FDE1B0AD6AA00A80E1B /* Inbox */,
@@ -286,6 +290,8 @@
 				184D3FCF1B0AD47300A80E1B /* Playlists.storyboard */,
 				184D3FF91B0AF25200A80E1B /* SAPlaylistsViewController.h */,
 				184D3FFA1B0AF25200A80E1B /* SAPlaylistsViewController.m */,
+				18A1E7BA1B0E3E1A0036EA19 /* SAPlaylistsTableViewCell.h */,
+				18A1E7BB1B0E3E1A0036EA19 /* SAPlaylistsTableViewCell.m */,
 			);
 			name = Playlists;
 			sourceTree = "<group>";
@@ -293,7 +299,6 @@
 		184D3FE01B0AD6B600A80E1B /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				18A1E7B21B0C23A50036EA19 /* ActionMenu */,
 				184D3FD01B0AD47300A80E1B /* Search.storyboard */,
 				18A1E78B1B0BCD4C0036EA19 /* SASearchPlaylistViewController.h */,
 				18A1E78C1B0BCD4C0036EA19 /* SASearchPlaylistViewController.m */,
@@ -605,6 +610,7 @@
 				18A1E7961B0BDF5F0036EA19 /* MGSwipeButton.m in Sources */,
 				18A1E77E1B0BA21F0036EA19 /* TrackParseAPI.m in Sources */,
 				18A1E7B91B0CFDB90036EA19 /* SAActionSheetAnimator.m in Sources */,
+				18A1E7BC1B0E3E1A0036EA19 /* SAPlaylistsTableViewCell.m in Sources */,
 				18A1E77F1B0BA21F0036EA19 /* SoundCloudAPI.m in Sources */,
 				18A1E7701B0B9C1D0036EA19 /* SASearchCollectionViewCell.m in Sources */,
 				18A1E7731B0BA0720036EA19 /* Helpers.m in Sources */,
