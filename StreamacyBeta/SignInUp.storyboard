@@ -13,10 +13,16 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Sign Up View Controller-->
+        <!--Sign Up-->
         <scene sceneID="EZm-4d-DFL">
             <objects>
                 <viewController id="bUE-de-Unq" customClass="SASignUpViewController" sceneMemberID="viewController">
@@ -29,53 +35,134 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppn-CS-mfU" customClass="TPKeyboardAvoidingScrollView">
-                                <rect key="frame" x="0.0" y="60" width="320" height="404"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQ8-v7-vIs">
-                                        <rect key="frame" x="98" y="52" width="125" height="21"/>
+                                        <rect key="frame" x="98" y="51" width="125" height="21"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
                                         <color key="textColor" red="0.55392551422119141" green="0.55463069677352905" blue="0.58136355876922607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hte-br-f3h">
-                                        <rect key="frame" x="93" y="128" width="125" height="25"/>
+                                        <rect key="frame" x="93" y="127" width="125" height="25"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
                                         <color key="textColor" red="0.55392551422119141" green="0.55463069677352905" blue="0.58136355876922607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8if-3Y-zfg">
-                                        <rect key="frame" x="44" y="83" width="232" height="30"/>
+                                        <rect key="frame" x="44" y="82" width="232" height="30"/>
                                         <color key="tintColor" red="0.28235294117647058" green="0.21176470588235294" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F3A-DK-VBS">
-                                        <rect key="frame" x="44" y="163" width="232" height="30"/>
+                                        <rect key="frame" x="44" y="162" width="232" height="30"/>
                                         <color key="tintColor" red="0.28235294117647058" green="0.21176470588235294" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7az-fl-b9J">
-                                        <rect key="frame" x="93" y="208" width="125" height="25"/>
+                                        <rect key="frame" x="93" y="207" width="125" height="25"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
                                         <color key="textColor" red="0.55392551422119141" green="0.55463069677352905" blue="0.58136355876922607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hs6-KX-HNv">
-                                        <rect key="frame" x="44" y="243" width="232" height="30"/>
+                                        <rect key="frame" x="44" y="242" width="232" height="30"/>
                                         <color key="tintColor" red="0.28235294117647058" green="0.21176470588235294" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Re-type Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bt4-Cf-sRB">
-                                        <rect key="frame" x="80" y="288" width="150" height="25"/>
+                                        <rect key="frame" x="80" y="287" width="150" height="25"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
                                         <color key="textColor" red="0.55392551422119141" green="0.55463069677352905" blue="0.58136355876922607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uFO-5L-cf3">
-                                        <rect key="frame" x="44" y="322" width="232" height="30"/>
+                                        <rect key="frame" x="44" y="321" width="232" height="30"/>
                                         <color key="tintColor" red="0.28235294117647058" green="0.21176470588235294" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pb-Fh-pKq">
+                                        <rect key="frame" x="129" y="418" width="53" height="36"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" red="0.53400689363479614" green="0.45570051670074463" blue="0.93690651655197144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="C0S-jY-QEa" kind="show" identifier="toSignIn" id="oMJ-D2-MS2"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6g-x6-0Og">
+                                        <rect key="frame" x="54" y="401" width="213" height="25"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                        <color key="textColor" red="0.55392551422119141" green="0.55463069677352905" blue="0.58136355876922607" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99991267919540405" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign Up" id="mrk-Cy-YrK"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="F3A-DK-VBS" id="qGX-sF-kUY"/>
+                        <outlet property="passwordTextField" destination="hs6-KX-HNv" id="zM2-fv-CS7"/>
+                        <outlet property="retypePasswordTextField" destination="uFO-5L-cf3" id="fBn-nc-8ar"/>
+                        <outlet property="scrollView" destination="Ppn-CS-mfU" id="YIU-i1-dbx"/>
+                        <outlet property="usernameTextField" destination="8if-3Y-zfg" id="QdX-Fc-kHq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GNt-Y9-puJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="391"/>
+        </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="a78-I2-Awg">
+            <objects>
+                <viewController id="C0S-jY-QEa" customClass="SASignInViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hED-mI-ZeH"/>
+                        <viewControllerLayoutGuide type="bottom" id="vsu-T7-YgY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mWG-vj-562">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Cj-1m-dIp" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkk-iI-o9T">
+                                        <rect key="frame" x="98" y="76" width="125" height="21"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                        <color key="textColor" red="0.55392551422119141" green="0.55463069677352905" blue="0.58136355876922607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQT-O4-uKJ">
+                                        <rect key="frame" x="93" y="152" width="125" height="25"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                        <color key="textColor" red="0.55392551422119141" green="0.55463069677352905" blue="0.58136355876922607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g94-rO-xOo">
+                                        <rect key="frame" x="44" y="107" width="232" height="30"/>
+                                        <color key="tintColor" red="0.28235294119999998" green="0.21176470589999999" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fnr-UK-uPF">
+                                        <rect key="frame" x="44" y="187" width="232" height="30"/>
+                                        <color key="tintColor" red="0.28235294119999998" green="0.21176470589999999" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
@@ -90,20 +177,16 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mrk-Cy-YrK"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="nameTextField" destination="F3A-DK-VBS" id="qGX-sF-kUY"/>
-                        <outlet property="passwordTextField" destination="hs6-KX-HNv" id="zM2-fv-CS7"/>
-                        <outlet property="retypePasswordTextField" destination="uFO-5L-cf3" id="fBn-nc-8ar"/>
-                        <outlet property="scrollView" destination="Ppn-CS-mfU" id="YIU-i1-dbx"/>
-                        <outlet property="usernameTextField" destination="8if-3Y-zfg" id="QdX-Fc-kHq"/>
+                        <outlet property="passwordTextField" destination="Fnr-UK-uPF" id="QZ1-Hh-w16"/>
+                        <outlet property="scrollView" destination="0Cj-1m-dIp" id="7fR-g2-4e6"/>
+                        <outlet property="usernameTextField" destination="g94-rO-xOo" id="MSg-7t-7JY"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GNt-Y9-puJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y8Y-Ec-dqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="934" y="391"/>
+            <point key="canvasLocation" x="1356" y="391"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W2g-kk-ZMi">
