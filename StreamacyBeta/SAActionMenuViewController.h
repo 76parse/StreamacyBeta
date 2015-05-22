@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RBStoryboardLink.h"
+#import "SAActionSaveViewController.h"
 
-@interface SAActionMenuViewController : UIViewController <UIViewControllerTransitioningDelegate>
+@interface SAActionMenuViewController : UIViewController <UIViewControllerTransitioningDelegate, SAActionSaveDelegate>
 @property (strong, nonatomic) NSDictionary *track;
 @end

@@ -87,9 +87,19 @@
 }
 
 - (IBAction)cancelButtonPressed:(UIButton *)sender {
-           [self dismissViewControllerAnimated:YES completion:^{
-            //complete dismiss of view controller
-           }];
+    [self.delegate dismissedchildViewController:self];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PFObject *playlist = self.playlists[indexPath.row];
+    TrackObject *track = [[TrackObject alloc]initWithData:self.track];
+    [PlaylistParseAPI saveTrack:track toPlaylist:playlist withCompletion:^(BOOL success) {
+        if (success) {
+            [self.delegate dismissedchildViewController:self];
+        }
+    }];
+
 }
 
 #pragma mark - Helpers

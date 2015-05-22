@@ -74,6 +74,16 @@
     return YES;
 }
 
+#pragma mark - SAActionSave Delegate
+
+-(void)dismissedchildViewController:(UIViewController *)viewController
+{
+    self.view.alpha = 0;
+    [viewController dismissViewControllerAnimated:YES completion:^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+}
+
 - (IBAction)exitButtonPressed:(UIButton *)sender
 {
     [self dismissViewControllerAnimated:YES completion:^{
@@ -83,11 +93,15 @@
 - (IBAction)saveButtonPressed:(UIButton *)sender
 {
     NSDictionary *track = self.track;
-    UIImage *artImage = [[UIImage alloc]init];
-    artImage = self.coverArtImageView.image;
     NSMutableDictionary *senderInfo = [[NSMutableDictionary alloc]init];
     [senderInfo setObject:track forKey:@"track"];
-    [senderInfo setObject:artImage forKey:@"artImage"];
+    if (self.coverArtImageView) {
+        [senderInfo setObject:self.coverArtImageView.image forKey:@"artImage"];
+    }
+    else{
+        UIImage *blankImage = [UIImage imageNamed:@"no-album-art.png"];
+        [senderInfo setObject:blankImage forKey:@"artImage"];
+    }
     [self performSegueWithIdentifier:@"toSaveVC" sender:senderInfo];
 }
 
@@ -117,6 +131,7 @@
         SAActionSaveViewController *saveVC = segue.destinationViewController;
         saveVC.track = sender[@"track"];
         saveVC.artImage = sender[@"artImage"];
+        saveVC.delegate = self;
         saveVC.transitioningDelegate = self;
         saveVC.modalPresentationStyle = UIModalPresentationCustom;
 

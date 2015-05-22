@@ -50,7 +50,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playlist Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLd-dQ-atd">
-                                                    <rect key="frame" x="78" y="14" width="196" height="24"/>
+                                                    <rect key="frame" x="78" y="15" width="196" height="24"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                                     <color key="textColor" red="0.55392551422119141" green="0.55463069677352905" blue="0.58136355876922607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -66,12 +66,12 @@
                                                 <constraint firstItem="fLd-dQ-atd" firstAttribute="leading" secondItem="cse-jf-SJ7" secondAttribute="trailing" constant="8" id="QVF-7O-KrF"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="jUP-XL-9bk" secondAttribute="bottom" constant="6" id="QkD-pk-frS"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="jUP-XL-9bk" secondAttribute="trailing" constant="51" id="XUk-az-ZCu"/>
-                                                <constraint firstItem="jUP-XL-9bk" firstAttribute="top" secondItem="fLd-dQ-atd" secondAttribute="bottom" constant="-1" id="gh1-nx-aJE"/>
+                                                <constraint firstItem="jUP-XL-9bk" firstAttribute="top" secondItem="fLd-dQ-atd" secondAttribute="bottom" constant="-2" id="gh1-nx-aJE"/>
                                                 <constraint firstItem="jUP-XL-9bk" firstAttribute="leading" secondItem="cse-jf-SJ7" secondAttribute="trailing" constant="8" id="iXz-lp-xRK"/>
                                                 <constraint firstItem="cse-jf-SJ7" firstAttribute="leading" secondItem="qKh-qw-cxC" secondAttribute="leading" constant="10" id="iZB-zQ-yIv"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="fLd-dQ-atd" secondAttribute="trailing" constant="5" id="njd-ee-lZg"/>
                                                 <constraint firstAttribute="centerY" secondItem="cse-jf-SJ7" secondAttribute="centerY" constant="-0.5" id="nmU-ax-nM4"/>
-                                                <constraint firstItem="fLd-dQ-atd" firstAttribute="top" secondItem="qKh-qw-cxC" secondAttribute="topMargin" constant="6" id="uP6-ic-XbU"/>
+                                                <constraint firstItem="fLd-dQ-atd" firstAttribute="top" secondItem="qKh-qw-cxC" secondAttribute="topMargin" constant="7" id="uP6-ic-XbU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

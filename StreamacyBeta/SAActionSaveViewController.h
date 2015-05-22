@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SAActionSaveDelegate <NSObject>
+@optional
+-(void)dismissedchildViewController:(UIViewController *)viewController;
+@end
+
 @interface SAActionSaveViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) id delegate;
+
 @property (strong, nonatomic) NSDictionary *track;
 @property (strong, nonatomic) UIImage *artImage;
 @end
