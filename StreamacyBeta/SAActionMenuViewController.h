@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "RBStoryboardLink.h"
 
-@interface SAActionMenuViewController : UIViewController
+@interface SAActionMenuViewController : UIViewController <UIViewControllerTransitioningDelegate>
 @property (strong, nonatomic) NSDictionary *track;
 @end

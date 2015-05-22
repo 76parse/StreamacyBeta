@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *playlists;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *addBarButton;
+@property (assign, nonatomic) BOOL editSelected;
 @end
 
 @implementation SAPlaylistsViewController
@@ -79,7 +80,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        //push to the playlists view controller.
     }
     else if (indexPath.section == 1)
     {
@@ -88,6 +88,30 @@
         [addPlaylistAlert show];
     }
 }
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //delete the cell and save the updated Parse Playlist
+        PFObject *playlist = self.playlists[indexPath.row];
+        [self.playlists removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self hideRightBarButtonItem:self.playlists.count];
+        if (!self.playlists.count) {
+            [self editButtonPressed:self.editButtonItem];
+        }
+        [playlist deleteInBackground];
+    }
+}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 1)
+        return NO;
+    else
+        return self.tableView.isEditing;
+}
+
 
 #pragma mark - Alert View Delegate
 
@@ -114,10 +138,26 @@
     }
 }
 
-- (IBAction)editButtonPressed:(UIBarButtonItem *)sender {
+- (IBAction)editButtonPressed:(UIBarButtonItem *)sender
+{
+    [self hideLeftBarButtonItem:self.editSelected];
+    if (self.editSelected) {
+        sender.title = @"Edit";
+        [self.tableView setEditing:NO animated:YES];
+        self.editSelected = NO;
+    }
+    else{
+        sender.title = @"Done";
+        [self.tableView setEditing:YES animated:YES];
+        self.editSelected = YES;
+    }
 }
 
-- (IBAction)addButtonPressed:(UIBarButtonItem *)sender {
+- (IBAction)addButtonPressed:(UIBarButtonItem *)sender
+{
+    UIAlertView *addPlaylistAlert = [[UIAlertView alloc]initWithTitle:@"Add Playlist" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
+    addPlaylistAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [addPlaylistAlert show];
 }
 
 #pragma mark - Helpers

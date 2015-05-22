@@ -9,6 +9,8 @@
 #import "SAActionMenuViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "Helpers.h"
+#import "SAActionSaveViewController.h"
+#import "SAActionSheetAnimator.h"
 
 @interface SAActionMenuViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *coverArtImageView;
@@ -18,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *playCountLabel;
 @property (strong, nonatomic) IBOutlet UIView *trackInfoView;
 - (IBAction)exitButtonPressed:(UIButton *)sender;
+- (IBAction)saveButtonPressed:(UIButton *)sender;
 @end
 
 @implementation SAActionMenuViewController
@@ -63,7 +66,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-
+    
 }
 
 -(BOOL)prefersStatusBarHidden
@@ -76,4 +79,49 @@
     [self dismissViewControllerAnimated:YES completion:^{
     }];
 }
+
+- (IBAction)saveButtonPressed:(UIButton *)sender
+{
+    NSDictionary *track = self.track;
+    UIImage *artImage = [[UIImage alloc]init];
+    artImage = self.coverArtImageView.image;
+    NSMutableDictionary *senderInfo = [[NSMutableDictionary alloc]init];
+    [senderInfo setObject:track forKey:@"track"];
+    [senderInfo setObject:artImage forKey:@"artImage"];
+    [self performSegueWithIdentifier:@"toSaveVC" sender:senderInfo];
+}
+
+#pragma mark - Animated Transitioning Delegate
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                  presentingController:(UIViewController *)presenting
+                                                                      sourceController:(UIViewController *)source {
+    
+    SAActionSheetAnimator *animator = [SAActionSheetAnimator new];
+    animator.presenting = YES;
+    return animator;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    SAActionSheetAnimator *animator = [SAActionSheetAnimator new];
+    return animator;
+}
+
+
+
+#pragma mark - Navigation
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"toSaveVC"]) {
+        SAActionSaveViewController *saveVC = segue.destinationViewController;
+        saveVC.track = sender[@"track"];
+        saveVC.artImage = sender[@"artImage"];
+        saveVC.transitioningDelegate = self;
+        saveVC.modalPresentationStyle = UIModalPresentationCustom;
+
+    }
+}
+
+
 @end
