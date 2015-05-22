@@ -12,4 +12,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *artImageView;
 @property (strong, nonatomic) IBOutlet UILabel *playlistNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *trackCountLabel;
+
+-(void)setDisplayForPlaylist:(NSDictionary *)playlist;
 @end

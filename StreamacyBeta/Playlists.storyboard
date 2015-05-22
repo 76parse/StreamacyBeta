@@ -31,8 +31,9 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="wbG-Wm-1mL">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.96696621179580688" green="0.96806448698043823" blue="0.96679061651229858" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" red="0.95891612768173218" green="0.95905369520187378" blue="0.95888596773147583" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Playlists" rowHeight="70" id="n8p-ce-yH6" customClass="SAPlaylistsTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -65,6 +66,7 @@
                                                 <constraint firstItem="fLd-dQ-atd" firstAttribute="leading" secondItem="cse-jf-SJ7" secondAttribute="trailing" constant="8" id="QVF-7O-KrF"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="jUP-XL-9bk" secondAttribute="bottom" constant="6" id="QkD-pk-frS"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="jUP-XL-9bk" secondAttribute="trailing" constant="51" id="XUk-az-ZCu"/>
+                                                <constraint firstItem="jUP-XL-9bk" firstAttribute="top" secondItem="fLd-dQ-atd" secondAttribute="bottom" constant="-1" id="gh1-nx-aJE"/>
                                                 <constraint firstItem="jUP-XL-9bk" firstAttribute="leading" secondItem="cse-jf-SJ7" secondAttribute="trailing" constant="8" id="iXz-lp-xRK"/>
                                                 <constraint firstItem="cse-jf-SJ7" firstAttribute="leading" secondItem="qKh-qw-cxC" secondAttribute="leading" constant="10" id="iZB-zQ-yIv"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="fLd-dQ-atd" secondAttribute="trailing" constant="5" id="njd-ee-lZg"/>

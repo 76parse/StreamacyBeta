@@ -8,6 +8,7 @@
 
 #import "SAPlaylistsViewController.h"
 #import "SAPlaylistsTableViewCell.h"
+#import "PlaylistParseAPI.h"
 
 @interface SAPlaylistsViewController ()
 - (IBAction)editButtonPressed:(UIBarButtonItem *)sender;
@@ -26,9 +27,12 @@
     self.tableView.dataSource = self;
     
     self.playlists = [[NSMutableArray alloc]init];
-    
-    [self hideLeftBarButtonItem];
-    [self hideRightBarButtonItem];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self hideLeftBarButtonItem:YES];
+    [self getPlaylistsForCurrentUser];
 }
 
 
@@ -51,7 +55,7 @@
             return @"";
         }
         else
-            return @"Playlist";
+            return @"Playlists";
     }
     else
         return @"";
@@ -62,6 +66,8 @@
     if (indexPath.section == 0) {
         static NSString *identifier = @"Playlists";
         SAPlaylistsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        NSDictionary *playlist = self.playlists[indexPath.row];
+        [cell setDisplayForPlaylist:playlist];
         return cell;
     }
     else{
@@ -77,7 +83,6 @@
     }
     else if (indexPath.section == 1)
     {
-        NSLog(@"Add playlist cell pressed");
         UIAlertView *addPlaylistAlert = [[UIAlertView alloc]initWithTitle:@"Add Playlist" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
         addPlaylistAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
         [addPlaylistAlert show];
@@ -97,6 +102,16 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
+    else
+    {
+        NSString *playlistName = [alertView textFieldAtIndex:0].text;
+        [PlaylistParseAPI createPlaylistWithName:playlistName withCompletion:^(BOOL success)
+         {
+             if (success) {
+                 [self getPlaylistsForCurrentUser];
+             }
+         }];
+    }
 }
 
 - (IBAction)editButtonPressed:(UIBarButtonItem *)sender {
@@ -107,16 +122,39 @@
 
 #pragma mark - Helpers
 
--(void)hideLeftBarButtonItem
+-(void)hideLeftBarButtonItem:(BOOL)hidden
 {
-    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor clearColor]];
-    self.navigationItem.leftBarButtonItem.enabled = NO;
-
+    if (hidden) {
+        [self.navigationItem.leftBarButtonItem setTintColor:[UIColor clearColor]];
+        self.navigationItem.leftBarButtonItem.enabled = NO;
+    }
+    else{
+        [self.navigationItem.leftBarButtonItem setTintColor:[UIColor blackColor]];
+        self.navigationItem.leftBarButtonItem.enabled = YES;
+    }
 }
 
--(void)hideRightBarButtonItem
+-(void)hideRightBarButtonItem:(BOOL)playlistCount
 {
-    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor clearColor]];
-    self.navigationItem.rightBarButtonItem.enabled = NO;
+    if (playlistCount) {
+        [self.navigationItem.rightBarButtonItem setTintColor:[UIColor blackColor]];
+        self.navigationItem.rightBarButtonItem.enabled = YES;
+    }
+    else{
+        [self.navigationItem.rightBarButtonItem setTintColor:[UIColor clearColor]];
+        self.navigationItem.rightBarButtonItem.enabled = NO;
+    }
+}
+
+-(void)getPlaylistsForCurrentUser
+{
+    PFUser *current = [PFUser currentUser];
+    if (current) {
+        [PlaylistParseAPI getPlaylistsForUser:current withCompletion:^(NSMutableArray *playlists) {
+            [self hideRightBarButtonItem:playlists.count];
+            self.playlists = playlists;
+            [self.tableView reloadData];
+        }];
+    }
 }
 @end
