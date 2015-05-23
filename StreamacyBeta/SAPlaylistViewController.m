@@ -10,6 +10,7 @@
 #import "SASwipeButtonSettings.h"
 #import "SAActionMenuViewController.h"
 #import "SAActionSheetAnimator.h"
+#import "PlaylistParseAPI.h"
 
 @interface SAPlaylistViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -32,6 +33,7 @@
     self.tracks = self.playlist[@"playlist"];
     self.navigationItem.title = self.playlist[@"playlistName"];
     [self.tableView reloadData];
+    
 }
 
 #pragma mark - Table View Delegate/Data Source
@@ -65,9 +67,11 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         //delete the cell and save the updated Parse Playlist
+        
+        NSDictionary *track = self.tracks[indexPath.row];
         [self.tracks removeObjectAtIndex:indexPath.row];
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-        [self.playlist saveInBackground];
+        [PlaylistParseAPI deleteTrack:track fromPlayList:self.playlist];
     }
 }
 

@@ -11,6 +11,12 @@
 #import "TrackObject.h"
 
 @interface PlaylistParseAPI : NSObject
+
+@property (assign, nonatomic) BOOL playlistNeedsReload;
+@property (strong, nonatomic) NSMutableArray *playlistCache;
+
+@property (strong, nonatomic) PFQuery *playlistQuery;
+
 +(void)getPlaylistsForUser:(PFUser *)user withCompletion:(void(^)(NSMutableArray *playlists))completion;
 +(void)createPlaylistWithName:(NSString *)name withCompletion:(void(^)(BOOL success))completion;
 +(void)saveTrack:(NSDictionary *)track toPlaylist:(PFObject *)playlist withCompletion:(void(^)(BOOL success))completion;

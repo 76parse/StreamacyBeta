@@ -7,20 +7,32 @@
 //
 
 #import "PlaylistParseAPI.h"
+#import "EGOCache.h"
 
 @implementation PlaylistParseAPI
+@synthesize playlistCache = _playlistCache;
 
 //Gets the playlists from the desired user
-
 +(void)getPlaylistsForUser:(PFUser *)user withCompletion:(void(^)(NSMutableArray *playlists))completion
 {
     PFQuery *userQuery = [PFQuery queryWithClassName:@"Playlists"];
     [userQuery whereKey:@"userId" equalTo:[user objectId]];
+    userQuery.cachePolicy = kPFCachePolicyCacheElseNetwork;
     [userQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error){
-            completion((NSMutableArray *)objects);
-        }
+            NSMutableArray *playlists = [[NSMutableArray alloc]init];
+            playlists = [objects mutableCopy];
+                completion(playlists);
+            }
     }];
+}
+
++(void)clearPlaylistCache;
+{
+    PFUser *current = [PFUser currentUser];
+    PFQuery *playlistQuery = [PFQuery queryWithClassName:@"Playlists"];
+    [playlistQuery whereKey:@"userId" equalTo:[current objectId]];
+    [playlistQuery clearCachedResult];
 }
 
 //Method creates a playlist and adds the first track to it
@@ -37,6 +49,7 @@
             NSLog(@"Error creating/saving playlist");
         }
         else{
+            [self clearPlaylistCache];
             completion((BOOL )YES);
         }
     }];
@@ -47,7 +60,6 @@
 
 + (void)saveTrack:(NSDictionary *)track toPlaylist:(PFObject *)playlist withCompletion:(void(^)(BOOL success))completion
 {
-
     [playlist addObject:track forKey:@"playlist"];
     [playlist saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (error)
@@ -55,6 +67,7 @@
             NSLog(@"Error creating/saving playlist");
         }
         else{
+            [self clearPlaylistCache];
             completion((BOOL)YES);
         }
     }];
@@ -69,6 +82,9 @@
         {
             NSLog(@"Error deleting track from playlist");
         }
+        else{
+            [self clearPlaylistCache];
+        }
     }];
 }
 
@@ -79,22 +95,10 @@
         {
             NSLog(@"%@", error);
         }
+        else{
+            [self clearPlaylistCache];
+        }
     }];
 }
-
-
-+ (NSMutableDictionary *)trackAsDictionary:(NSMutableDictionary *)data
-{
-    NSLog(@"%@", data);
-    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc]init];
-    [dictionary setObject:data[TrackUser] forKey:TrackUser];
-    [dictionary setObject:data[TrackStreamURL] forKey:TrackStreamURL];
-    [dictionary setObject:data[TrackArtworkURL] forKey:TrackArtworkURL];
-    [dictionary setObject:data[TrackUsernameTitle] forKey:TrackUsernameTitle];
-    [dictionary setObject:data[TrackDuration] forKey:TrackDuration];
-    [dictionary setObject:data[TrackPlaybackCount] forKey:TrackPlaybackCount];
-    return dictionary;
-}
-
 
 @end

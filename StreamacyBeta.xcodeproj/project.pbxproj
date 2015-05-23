@@ -64,6 +64,7 @@
 		18A1E7DB1B0E8C2C0036EA19 /* SASignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7DA1B0E8C2C0036EA19 /* SASignInViewController.m */; };
 		18A1E7DE1B0FB36F0036EA19 /* SAActionSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7DD1B0FB36F0036EA19 /* SAActionSaveViewController.m */; };
 		18A1E7E11B0FD8640036EA19 /* SAPlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A1E7E01B0FD8640036EA19 /* SAPlaylistViewController.m */; };
+		18E928361B11180600943B94 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E928351B11180600943B94 /* EGOCache.m */; };
 		D8D0BBC36C37CCC5AF9A8A3B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F25BF0504A8E95EE20FA02D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -178,6 +179,8 @@
 		18A1E7DD1B0FB36F0036EA19 /* SAActionSaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAActionSaveViewController.m; sourceTree = "<group>"; };
 		18A1E7DF1B0FD8640036EA19 /* SAPlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAPlaylistViewController.h; sourceTree = "<group>"; };
 		18A1E7E01B0FD8640036EA19 /* SAPlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAPlaylistViewController.m; sourceTree = "<group>"; };
+		18E928341B11180600943B94 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
+		18E928351B11180600943B94 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
 		1F25BF0504A8E95EE20FA02D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A5676AF2D9FBCAB445FADF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BE0032CD7B7C36D5843539AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -368,6 +371,8 @@
 		18A1E7801B0BA2220036EA19 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				18E928341B11180600943B94 /* EGOCache.h */,
+				18E928351B11180600943B94 /* EGOCache.m */,
 				18A1E7771B0BA21F0036EA19 /* PlaylistParseAPI.h */,
 				18A1E7781B0BA21F0036EA19 /* PlaylistParseAPI.m */,
 				18A1E7791B0BA21F0036EA19 /* TrackParseAPI.h */,
@@ -678,6 +683,7 @@
 				18A1E7C21B0E55A60036EA19 /* SASignUpViewController.m in Sources */,
 				184D3FAA1B0AD22B00A80E1B /* main.m in Sources */,
 				18A1E7E11B0FD8640036EA19 /* SAPlaylistViewController.m in Sources */,
+				18E928361B11180600943B94 /* EGOCache.m in Sources */,
 				18A1E7DE1B0FB36F0036EA19 /* SAActionSaveViewController.m in Sources */,
 				184D3FFB1B0AF25200A80E1B /* SAPlaylistsViewController.m in Sources */,
 				18A1E7A61B0C1E9B0036EA19 /* RBStoryboardLink.m in Sources */,
