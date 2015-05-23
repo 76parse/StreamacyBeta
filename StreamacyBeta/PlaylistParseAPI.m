@@ -17,6 +17,7 @@
 {
     PFQuery *userQuery = [PFQuery queryWithClassName:@"Playlists"];
     [userQuery whereKey:@"userId" equalTo:[user objectId]];
+    [userQuery orderByDescending:@"createdAt"];
     userQuery.cachePolicy = kPFCachePolicyCacheElseNetwork;
     [userQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error){
@@ -32,6 +33,7 @@
     PFUser *current = [PFUser currentUser];
     PFQuery *playlistQuery = [PFQuery queryWithClassName:@"Playlists"];
     [playlistQuery whereKey:@"userId" equalTo:[current objectId]];
+    [playlistQuery orderByDescending:@"createdAt"];
     [playlistQuery clearCachedResult];
 }
 

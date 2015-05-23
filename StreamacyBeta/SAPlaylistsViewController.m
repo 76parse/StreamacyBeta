@@ -103,7 +103,7 @@
         if (!self.playlists.count) {
             [self editButtonPressed:self.editButtonItem];
         }
-        [playlist deleteInBackground];
+        [PlaylistParseAPI deletePlaylist:playlist];
     }
 }
 
