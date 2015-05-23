@@ -9,6 +9,7 @@
 #import "SAPlaylistsViewController.h"
 #import "SAPlaylistsTableViewCell.h"
 #import "PlaylistParseAPI.h"
+#import "SAPlaylistViewController.h"
 
 @interface SAPlaylistsViewController ()
 - (IBAction)editButtonPressed:(UIBarButtonItem *)sender;
@@ -80,6 +81,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
+        PFObject *playlist= self.playlists[indexPath.row];
+        [self performSegueWithIdentifier:@"toPlaylistVC" sender:playlist];
     }
     else if (indexPath.section == 1)
     {
@@ -111,7 +114,6 @@
     else
         return self.tableView.isEditing;
 }
-
 
 #pragma mark - Alert View Delegate
 
@@ -169,7 +171,7 @@
         self.navigationItem.leftBarButtonItem.enabled = NO;
     }
     else{
-        [self.navigationItem.leftBarButtonItem setTintColor:[UIColor blackColor]];
+        [self.navigationItem.leftBarButtonItem setTintColor:[UIColor whiteColor]];
         self.navigationItem.leftBarButtonItem.enabled = YES;
     }
 }
@@ -177,7 +179,7 @@
 -(void)hideRightBarButtonItem:(BOOL)playlistCount
 {
     if (playlistCount) {
-        [self.navigationItem.rightBarButtonItem setTintColor:[UIColor blackColor]];
+        [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
         self.navigationItem.rightBarButtonItem.enabled = YES;
     }
     else{
@@ -195,6 +197,17 @@
             self.playlists = playlists;
             [self.tableView reloadData];
         }];
+    }
+}
+
+
+#pragma mark - Navigation
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"toPlaylistVC"]) {
+        SAPlaylistViewController *playlistVC = segue.destinationViewController;
+        playlistVC.playlist = sender;
     }
 }
 @end

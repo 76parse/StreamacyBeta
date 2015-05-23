@@ -1,51 +1,52 @@
 //
-//  SASearchPlaylistViewController.m
+//  SAPlaylistViewController.m
 //  StreamacyBeta
 //
-//  Created by Andrew Friedman on 5/19/15.
+//  Created by Andrew Friedman on 5/22/15.
 //  Copyright (c) 2015 Andrew Friedman. All rights reserved.
 //
 
-#import "SASearchPlaylistViewController.h"
-#import "SAActionSheetAnimator.h"
+#import "SAPlaylistViewController.h"
+#import "SASwipeButtonSettings.h"
 #import "SAActionMenuViewController.h"
+#import "SAActionSheetAnimator.h"
 
-@interface SASearchPlaylistViewController ()
+@interface SAPlaylistViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSArray *tracks;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *editBarButtonItem;
+- (IBAction)editButtonPressed:(UIBarButtonItem *)sender;
+@property (strong, nonatomic) NSMutableArray *tracks;
+@property (assign, nonatomic) BOOL editSelected;
 @end
 
-@implementation SASearchPlaylistViewController
+@implementation SAPlaylistViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
     self.tracks = [[NSMutableArray alloc]init];
     
-    
-    NSDictionary *playlist = self.playlist;
-    
-    self.navigationItem.title = playlist[@"title"];
-    
-    NSArray *playlistTracks = playlist[@"tracks"];
-    self.tracks = playlistTracks;
-    
+    self.tracks = self.playlist[@"playlist"];
+    self.navigationItem.title = self.playlist[@"playlistName"];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table View Delegate/Data Source
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.tracks.count;
+    return  self.tracks.count;
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     return 1;
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
     return @"Songs";
 }
 
@@ -53,11 +54,29 @@
 {
     static NSString *identifier = @"Songs";
     SASearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    NSDictionary *track = self.tracks[indexPath.row];
     cell.delegate = self;
     cell.searchDelegate = self;
-    NSDictionary *track = self.tracks[indexPath.row];
     [cell setDisplayForTrack:track];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //delete the cell and save the updated Parse Playlist
+        [self.tracks removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+        [self.playlist saveInBackground];
+    }
+}
+
+-(void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    [super setEditing:editing animated:animated];
+    for (UITableViewCell *cell in [self.tableView visibleCells]) {
+        [cell.contentView setNeedsUpdateConstraints];
+    }
 }
 
 #pragma mark - MGSwipableTableCell Delegate
@@ -127,5 +146,20 @@
     return animator;
 }
 
+#pragma mark - Custom Buttons
 
+- (IBAction)editButtonPressed:(UIBarButtonItem *)sender
+{
+    if (self.editSelected) {
+        sender.title = @"Edit";
+        [self.tableView setEditing:NO animated:YES];
+        self.editSelected = NO;
+    }
+    else{
+        sender.title = @"Done";
+        [self.tableView setEditing:YES animated:YES];
+        self.editSelected = YES;
+    }
+
+}
 @end

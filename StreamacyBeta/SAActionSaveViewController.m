@@ -93,13 +93,12 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PFObject *playlist = self.playlists[indexPath.row];
-    TrackObject *track = [[TrackObject alloc]initWithData:self.track];
+    NSDictionary *track = [[NSDictionary alloc]initWithDictionary:self.track];
     [PlaylistParseAPI saveTrack:track toPlaylist:playlist withCompletion:^(BOOL success) {
         if (success) {
             [self.delegate dismissedchildViewController:self];
         }
     }];
-
 }
 
 #pragma mark - Helpers

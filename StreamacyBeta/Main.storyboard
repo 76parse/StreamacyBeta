@@ -8,6 +8,7 @@
         <scene sceneID="f5Z-9p-yzD">
             <objects>
                 <tabBarController id="0QF-3t-Yz6" customClass="SATabBarController" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="NNz-P8-pKB">

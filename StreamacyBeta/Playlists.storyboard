@@ -7,8 +7,11 @@
     <customFonts key="customFonts">
         <mutableArray key="OpenSans-Light.ttf">
             <string>OpenSans-Light</string>
+            <string>OpenSans-Light</string>
         </mutableArray>
         <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+            <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
         </mutableArray>
@@ -108,13 +111,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Playlists" id="luH-Qh-ZCL">
                         <barButtonItem key="leftBarButtonItem" tag="1" title="Add" id="HjR-S3-spy">
-                            <color key="tintColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="ErP-UZ-eoL" id="60w-nI-ZYp"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Edit" style="plain" id="UeM-Yc-i1E">
-                            <color key="tintColor" white="0.0" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="UeM-Yc-i1E">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="editButtonPressed:" destination="ErP-UZ-eoL" id="vJI-RB-vAk"/>
                             </connections>
@@ -124,21 +127,140 @@
                     <connections>
                         <outlet property="addBarButton" destination="HjR-S3-spy" id="nll-6G-zBS"/>
                         <outlet property="tableView" destination="wbG-Wm-1mL" id="mCz-g5-Uem"/>
+                        <segue destination="oXS-Et-Sdg" kind="show" identifier="toPlaylistVC" id="FiP-Dz-p3c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKd-0o-X9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1155" y="408"/>
         </scene>
+        <!--Playlist View Controller-->
+        <scene sceneID="ICZ-33-h3j">
+            <objects>
+                <viewController id="oXS-Et-Sdg" customClass="SAPlaylistViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rzm-pY-mVV"/>
+                        <viewControllerLayoutGuide type="bottom" id="4HX-Rl-piR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oi7-Vk-9U8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="PnM-tV-6db">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Songs" rowHeight="70" id="K8T-sf-iK0" customClass="SASearchTableViewCell">
+                                        <rect key="frame" x="0.0" y="249" width="320" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K8T-sf-iK0" id="vBE-um-jL8">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dyX-GE-GEm">
+                                                    <rect key="frame" x="10" y="5" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="Zox-gb-NRM"/>
+                                                        <constraint firstAttribute="height" constant="60" id="llW-dY-tDW"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awake" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDl-XJ-Ium">
+                                                    <rect key="frame" x="78" y="16" width="46" height="21"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                    <color key="textColor" red="0.55493468050000005" green="0.55568140749999995" blue="0.57906836269999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4:23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrJ-6z-XCT">
+                                                    <rect key="frame" x="232" y="31" width="44" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="P6f-Rw-E6k"/>
+                                                        <constraint firstAttribute="height" constant="17" id="bCj-Lp-Vpt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                                    <color key="textColor" red="0.55493468050000005" green="0.55568140749999995" blue="0.57906836269999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZd-qy-j3J">
+                                                    <rect key="frame" x="274" y="18" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="Fio-2M-QMU"/>
+                                                        <constraint firstAttribute="height" constant="44" id="U1d-Or-3Dh"/>
+                                                    </constraints>
+                                                    <color key="tintColor" red="0.55493468050000005" green="0.55568140749999995" blue="0.57906836269999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" image="PlusCircle.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="plusButtonPressed:" destination="K8T-sf-iK0" eventType="touchUpInside" id="GB1-as-9eb"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tycho" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEl-wB-Bza">
+                                                    <rect key="frame" x="78" y="39" width="34" height="18"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="13"/>
+                                                    <color key="textColor" red="0.55493468050000005" green="0.55568140749999995" blue="0.57906836269999995" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="pEl-wB-Bza" secondAttribute="trailing" constant="80" id="2Mu-Jr-Slw"/>
+                                                <constraint firstAttribute="centerY" secondItem="UZd-qy-j3J" secondAttribute="centerY" constant="-5" id="68M-wM-6Np"/>
+                                                <constraint firstAttribute="centerY" secondItem="wrJ-6z-XCT" secondAttribute="centerY" constant="-4.5" id="C1A-uU-lIV"/>
+                                                <constraint firstItem="yDl-XJ-Ium" firstAttribute="leading" secondItem="dyX-GE-GEm" secondAttribute="trailing" constant="8" id="FVU-pd-AdL"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="yDl-XJ-Ium" secondAttribute="trailing" constant="70" id="KdY-w7-gk9"/>
+                                                <constraint firstItem="pEl-wB-Bza" firstAttribute="top" secondItem="yDl-XJ-Ium" secondAttribute="bottom" constant="2" id="Oxd-ck-rer"/>
+                                                <constraint firstItem="UZd-qy-j3J" firstAttribute="leading" secondItem="wrJ-6z-XCT" secondAttribute="trailing" constant="-2" id="UZI-St-1fO"/>
+                                                <constraint firstAttribute="centerY" secondItem="dyX-GE-GEm" secondAttribute="centerY" id="XFV-nY-dJ2"/>
+                                                <constraint firstItem="dyX-GE-GEm" firstAttribute="leading" secondItem="vBE-um-jL8" secondAttribute="leading" constant="10" id="gqn-8W-7nS"/>
+                                                <constraint firstItem="pEl-wB-Bza" firstAttribute="leading" secondItem="dyX-GE-GEm" secondAttribute="trailing" constant="8" id="jZb-Ge-zxs"/>
+                                                <constraint firstItem="yDl-XJ-Ium" firstAttribute="centerY" secondItem="dyX-GE-GEm" secondAttribute="centerY" constant="-8.5" id="vvk-uY-asp"/>
+                                                <constraint firstItem="UZd-qy-j3J" firstAttribute="trailing" secondItem="vBE-um-jL8" secondAttribute="trailingMargin" constant="6" id="xYY-H0-uaK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="coverArtImageView" destination="dyX-GE-GEm" id="U4s-5s-mbo"/>
+                                            <outlet property="durationLabel" destination="wrJ-6z-XCT" id="rzg-HU-4j5"/>
+                                            <outlet property="plusButton" destination="UZd-qy-j3J" id="TkT-Nv-bzO"/>
+                                            <outlet property="trackTitleLabel" destination="yDl-XJ-Ium" id="wUk-pb-fFb"/>
+                                            <outlet property="userLabel" destination="pEl-wB-Bza" id="jB6-jW-2ew"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zs5-EM-bLz">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Bjb-Qj-Ax2">
+                            <color key="tintColor" red="0.99991267919540405" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="editButtonPressed:" destination="oXS-Et-Sdg" id="SMA-bF-K3V"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="editBarButtonItem" destination="Bjb-Qj-Ax2" id="lug-6n-ydu"/>
+                        <outlet property="tableView" destination="PnM-tV-6db" id="SrV-Oc-h79"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cyg-1d-eUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="408"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="T3I-1c-hiB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uhP-I8-OUn" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7lj-JN-wLR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.99991267919540405" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.53400689363479614" green="0.45570051670074463" blue="0.93690651655197144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99991267919540405" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -150,4 +272,7 @@
             <point key="canvasLocation" x="712" y="408"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PlusCircle.png" width="24" height="24"/>
+    </resources>
 </document>

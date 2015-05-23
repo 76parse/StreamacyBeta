@@ -45,9 +45,10 @@
 
 //Saves a track to the selected playlist
 
-+ (void)saveTrack:(TrackObject *)track toPlaylist:(PFObject *)playlist withCompletion:(void(^)(BOOL success))completion
++ (void)saveTrack:(NSDictionary *)track toPlaylist:(PFObject *)playlist withCompletion:(void(^)(BOOL success))completion
 {
-    [playlist addObject:[self trackObjectAsPropertyList:track] forKey:@"playlist"];
+
+    [playlist addObject:track forKey:@"playlist"];
     [playlist saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (error)
         {
@@ -59,7 +60,7 @@
     }];
 }
 
-+(void)deleteTrack:(TrackObject *)track fromPlayList:(PFObject *)playlist
++(void)deleteTrack:(NSDictionary *)track fromPlayList:(PFObject *)playlist
 {
     NSMutableArray *tracks = [playlist objectForKey:@"playlist"];
     [tracks removeObjectIdenticalTo:track];
@@ -81,13 +82,19 @@
     }];
 }
 
-#pragma mark - Helper Methods
 
-+ (NSDictionary *)trackObjectAsPropertyList:(TrackObject *)track
++ (NSMutableDictionary *)trackAsDictionary:(NSMutableDictionary *)data
 {
-    NSDictionary *dictonary = @{TrackUser: track.user, TrackStreamURL: track.streamingURL, TrackArtworkURL: track.artworkURL, TrackTitle: track.trackTitle, TrackDuration: @(track.duration)};
-    
-    return dictonary;
+    NSLog(@"%@", data);
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc]init];
+    [dictionary setObject:data[TrackUser] forKey:TrackUser];
+    [dictionary setObject:data[TrackStreamURL] forKey:TrackStreamURL];
+    [dictionary setObject:data[TrackArtworkURL] forKey:TrackArtworkURL];
+    [dictionary setObject:data[TrackUsernameTitle] forKey:TrackUsernameTitle];
+    [dictionary setObject:data[TrackDuration] forKey:TrackDuration];
+    [dictionary setObject:data[TrackPlaybackCount] forKey:TrackPlaybackCount];
+    return dictionary;
 }
+
 
 @end

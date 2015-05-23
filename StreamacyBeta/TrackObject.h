@@ -17,7 +17,7 @@ extern NSString *const TrackUsernameTitle;
 extern NSString *const TrackDuration;
 extern NSString *const TrackTitle;
 extern NSString *const TrackUser;
-
+extern NSString *const TrackPlaybackCount;
 
 //Saving Playlists constants
 extern NSString *const ArrayOfSavedLists;
@@ -28,15 +28,9 @@ extern NSString *const kNoArwork;
 
 @interface TrackObject : NSObject
 
-@property  NSString *streamingURL;
-@property  NSString *artworkURL;
-@property  NSDictionary *user;
-@property  NSString *username;
-@property  NSString *trackTitle;
-@property  double duration;
-@property NSDictionary *trackData;
+@property (strong, nonatomic) NSDictionary *trackData;
 
 -(id)initWithData:(NSDictionary *)data;
--(NSDictionary *)trackObjectAsDictionary:(TrackObject *)trackObject;
+- (NSDictionary *)dataAsDictionary:(NSDictionary *)data;
 @end
 

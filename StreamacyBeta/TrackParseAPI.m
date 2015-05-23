@@ -30,7 +30,7 @@
 {
     PFUser *currentUser = [PFUser currentUser];
     PFObject *playlistObject = [PFObject objectWithClassName:@"Playlists"];
-    [playlistObject addObject:[self trackObjectAsPropertyList:track] forKey:@"playlist"];
+    [playlistObject addObject:track forKey:@"playlist"];
     [playlistObject setObject:[currentUser objectId] forKey:@"userId"];
     [playlistObject setObject:name forKey:@"playlistName"];
     
@@ -47,7 +47,7 @@
 
 + (void)saveTrack:(TrackObject *)track toPlaylist:(PFObject *)playlist
 {
-    [playlist addObject:[self trackObjectAsPropertyList:track] forKey:@"playlist"];
+    [playlist addObject:track.trackData forKey:@"playlist"];
     [playlist saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (error)
         {
@@ -78,13 +78,5 @@
     }];
 }
 
-#pragma mark - Helper Methods
-
-+ (NSDictionary *)trackObjectAsPropertyList:(TrackObject *)track
-{
-    NSDictionary *dictonary = @{TrackUser: track.user, TrackStreamURL: track.streamingURL, TrackArtworkURL: track.artworkURL, TrackUsernameTitle: track.username, TrackTitle: track.trackTitle, TrackDuration: @(track.duration)};
-    
-    return dictonary;
-}
 
 @end

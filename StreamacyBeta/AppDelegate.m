@@ -29,6 +29,9 @@
     [Parse setApplicationId:@"jjWiNLpXGKMpvEkBwEr8hkKqD3EnS4Y4Zk8nciMD"
                   clientKey:@"qREHy9fjYeVm4PyyeL1Glme5lmg9ODCCEBUAWgvJ"];
     
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     PFUser *current = [PFUser currentUser];
     if (current) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
