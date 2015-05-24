@@ -32,7 +32,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="wbG-Wm-1mL">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="wbG-Wm-1mL">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.96696621179580688" green="0.96806448698043823" blue="0.96679061651229858" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -89,25 +89,41 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Aob-q6-dCb" id="ejo-TT-KLl">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Playlist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzF-gS-FR0">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Playlist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzF-gS-FR0">
                                                     <rect key="frame" x="31" y="24" width="242" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="242" id="awg-Ba-7jd"/>
+                                                        <constraint firstAttribute="height" constant="21" id="qXn-u7-HSj"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                                     <color key="textColor" red="0.55392551422119141" green="0.55463069677352905" blue="0.58136355876922607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kc-95-3cW">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kc-95-3cW">
                                                     <rect key="frame" x="290" y="9" width="22" height="52"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="38"/>
                                                     <color key="textColor" red="0.55392551422119141" green="0.55463069677352905" blue="0.58136355876922607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0kc-95-3cW" firstAttribute="trailing" secondItem="ejo-TT-KLl" secondAttribute="trailingMargin" id="C0W-18-kFq"/>
+                                                <constraint firstAttribute="centerY" secondItem="0kc-95-3cW" secondAttribute="centerY" constant="-0.5" id="Ehu-8l-MxU"/>
+                                                <constraint firstAttribute="centerY" secondItem="WzF-gS-FR0" secondAttribute="centerY" id="Rc1-RU-XWe"/>
+                                                <constraint firstAttribute="centerX" secondItem="WzF-gS-FR0" secondAttribute="centerX" constant="8" id="qcI-mW-57y"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wbG-Wm-1mL" secondAttribute="trailing" id="InI-g4-T25"/>
+                            <constraint firstItem="Yvh-Nd-SFX" firstAttribute="top" secondItem="wbG-Wm-1mL" secondAttribute="bottom" id="IxP-zH-Xe8"/>
+                            <constraint firstItem="wbG-Wm-1mL" firstAttribute="top" secondItem="6xM-5V-JA0" secondAttribute="top" id="UWq-CY-Jpz"/>
+                            <constraint firstItem="wbG-Wm-1mL" firstAttribute="leading" secondItem="6xM-5V-JA0" secondAttribute="leading" id="kJO-er-Yru"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Playlists" id="luH-Qh-ZCL">
                         <barButtonItem key="leftBarButtonItem" tag="1" title="Add" id="HjR-S3-spy">
@@ -146,7 +162,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="PnM-tV-6db">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="PnM-tV-6db">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
@@ -227,6 +243,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PnM-tV-6db" secondAttribute="trailing" id="1Pj-1M-sUg"/>
+                            <constraint firstItem="PnM-tV-6db" firstAttribute="leading" secondItem="Oi7-Vk-9U8" secondAttribute="leading" id="Yzg-wh-caZ"/>
+                            <constraint firstItem="PnM-tV-6db" firstAttribute="top" secondItem="Oi7-Vk-9U8" secondAttribute="top" id="lWw-P9-fEK"/>
+                            <constraint firstItem="4HX-Rl-piR" firstAttribute="top" secondItem="PnM-tV-6db" secondAttribute="bottom" id="n6C-3C-OcZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zs5-EM-bLz">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="Bjb-Qj-Ax2">

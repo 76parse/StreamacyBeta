@@ -246,7 +246,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="dQP-6E-JXP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="dQP-6E-JXP">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.96791547536849976" green="0.96805411577224731" blue="0.96788495779037476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -446,6 +446,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dQP-6E-JXP" secondAttribute="trailing" id="IRI-BE-raW"/>
+                            <constraint firstItem="dQP-6E-JXP" firstAttribute="leading" secondItem="7pF-tJ-u4g" secondAttribute="leading" id="bIK-Ez-Ab6"/>
+                            <constraint firstItem="dQP-6E-JXP" firstAttribute="top" secondItem="7pF-tJ-u4g" secondAttribute="top" id="qeV-a8-J6s"/>
+                            <constraint firstItem="9fn-XN-Zdr" firstAttribute="top" secondItem="dQP-6E-JXP" secondAttribute="bottom" id="trs-BY-R99"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>

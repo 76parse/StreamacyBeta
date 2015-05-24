@@ -10,7 +10,6 @@
 #import "EGOCache.h"
 
 @implementation PlaylistParseAPI
-@synthesize playlistCache = _playlistCache;
 
 //Gets the playlists from the desired user
 +(void)getPlaylistsForUser:(PFUser *)user withCompletion:(void(^)(NSMutableArray *playlists))completion
