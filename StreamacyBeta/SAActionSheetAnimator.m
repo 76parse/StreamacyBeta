@@ -32,14 +32,18 @@
         CGRect startFrame = fromViewController.view.frame;
         startFrame.origin.y = frameHeight;
         toViewController.view.frame = startFrame;
-      
+        
+        //create a view with the same background color to cover up background on bounce effect
+        UIView *bottomCover = [[UIView alloc]initWithFrame:CGRectMake(0, startFrame.size.height-30, startFrame.size.width, 30)];
+        [bottomCover setBackgroundColor:[UIColor colorWithRed:0.956 green:0.962 blue:0.956 alpha:1]];
+        [transitionContext.containerView insertSubview:bottomCover belowSubview:toViewController.view];
+        
         __block CGRect endFrame = toViewController.view.frame;
         [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0 usingSpringWithDamping:.75 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
             endFrame.origin.y = 0;
-            endFrame.size.height +=30;
             toViewController.view.frame = endFrame;
         } completion:^(BOOL finished) {
-            endFrame.size.height -= 30;
+            [bottomCover removeFromSuperview];
             toViewController.view.frame = endFrame;
             [transitionContext completeTransition:YES];
         }];

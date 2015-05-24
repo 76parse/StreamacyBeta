@@ -18,6 +18,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *artImageView;
 @property (strong, nonatomic) IBOutlet UILabel *trackTitleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (strong, nonatomic) IBOutlet UIView *tableHeader;
 @property (strong, nonatomic) IBOutlet UIButton *cancelButton;
 @property (strong, nonatomic) IBOutlet UIView *actionMenuView;
 @property (strong, nonatomic) IBOutlet UILabel *playbackCountLabel;
@@ -35,6 +36,12 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    
+    CGRect headerFrame = self.tableHeader.frame;
+    headerFrame.size.height = (self.view.frame.size.height*.3169);
+    self.tableHeader.frame = headerFrame;
+    [self.tableView setNeedsDisplay];
     
     self.cancelButton.layer.borderColor = [UIColor colorWithRed:0.784 green:0.778 blue:0.801 alpha:1].CGColor;
     self.headerView.layer.borderColor = [UIColor colorWithRed:0.784 green:0.778 blue:0.801 alpha:1].CGColor;
@@ -76,6 +83,7 @@
         return @"No playlists";
     }
 }
+
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
